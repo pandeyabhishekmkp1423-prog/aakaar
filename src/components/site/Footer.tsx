@@ -1,0 +1,8 @@
+import Link from "@/components/common/Link";
+import { ArrowUpRight } from "lucide-react";
+
+export function Footer() {
+  return <footer className="ad-footer"><div className="ad-container"><div className="ad-footer-top"><div className="ad-footer-lockup"><img src="/Angular White and Neon Lime Logo.png" alt="Aakaar Digital logo" /><div><p className="ad-footer-brand">Aakaar<span>.</span></p><p className="ad-footer-tagline">Digital Growth<br />& Technology Solutions.</p></div></div><div className="ad-footer-invite"><p>Have something ambitious in mind?</p><Link href="/contact">Start a project <ArrowUpRight size={18} /></Link></div></div><div className="ad-footer-grid"><div><p className="ad-footer-label">Navigate</p><Link href="/">Home</Link><Link href="/about">About</Link><Link href="/services">Services</Link><Link href="/case-studies">Work</Link><Link href="/blog">Insights</Link><Link href="/contact">Contact</Link></div><div><p className="ad-footer-label">Digital growth</p><span>SEO & Local SEO</span><span>Performance Marketing</span><span>Social Media Marketing</span><span>Content Strategy</span></div><div><p className="ad-footer-label">Technology</p><span>Website Development</span><span>E-commerce</span><span>Custom Software</span><span>CRM & ERP</span><span>Business Automation</span></div><div><p className="ad-footer-label">Explore</p><Link href="/privacy-policy">Privacy Policy</Link><Link href="/terms">Terms & Conditions</Link><span className="ad-footer-note">For project enquiries, use our contact form and we’ll be in touch.</span></div></div><div className="ad-footer-bottom"><span>© {new Date().getFullYear()} Aakaar Digital</span><span>aakaardigital.com</span><span>Independent digital studio</span></div></div></footer>;
+}
+
+export default Footer;

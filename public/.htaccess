@@ -1,0 +1,34 @@
+# ----------------------------------------------------------------------
+# Techvorainc.ca - React SPA Router .htaccess
+# Handles HTML5 pushState routing for all direct URLs
+# ----------------------------------------------------------------------
+
+DirectoryIndex index.html
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Do not rewrite real files or directories (allows /admin/ to execute directly)
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Fallback for admin assets if requested from root domain
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{DOCUMENT_ROOT}/admin/assets/$1 -f
+  RewriteRule ^assets/(.*)$ /admin/assets/$1 [L]
+
+  # All other routes serve React Single Page Application index.html
+  RewriteRule ^index\.html$ - [L]
+  RewriteRule . /index.html [L]
+</IfModule>
+
+# Security Headers & Caching
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=()"
+  Header set Strict-Transport-Security "max-age=31536000; includeSubDomains" "expr=%{HTTPS} == 'on'"
+</IfModule>

@@ -1,0 +1,49 @@
+﻿<!doctype html>
+<html lang="en" class="h-full antialiased">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Aakaar Digital | Custom Software & Global IT Solutions</title>
+    <meta
+      name="description"
+      content="Bespoke web applications, mobile apps, CRM systems, LMS platforms, WhatsApp automation, and workflow integrations engineered for ambitious businesses worldwide."
+    />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="author" content="Aakaar Digital Engineering Team" />
+    <meta name="publisher" content="Aakaar Digital" />
+    <link rel="icon" type="image/png" href="/Angular White and Neon Lime Logo.png" />
+    <link rel="apple-touch-icon" href="/Angular White and Neon Lime Logo.png" />
+
+    <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Theme initialization -->
+    <script>
+      (function () {
+        try {
+          const stored = localStorage.getItem("maple-theme");
+          const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+          if (stored === "dark" || (!stored && prefersDark)) {
+            document.documentElement.classList.add("dark");
+            document.documentElement.setAttribute("data-theme", "dark");
+          } else {
+            document.documentElement.classList.remove("dark");
+            document.documentElement.setAttribute("data-theme", "light");
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body class="min-h-full flex flex-col bg-canvas text-ink transition-colors duration-150">
+    <div id="root" class="min-h-full flex flex-col flex-1"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
+
