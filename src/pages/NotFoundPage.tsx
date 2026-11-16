@@ -1,4 +1,4 @@
-﻿import Link from "@/components/common/Link";
+import Link from "@/components/common/Link";
 import { ArrowRight } from "lucide-react";
 import { useSEO } from "@/lib/seo";
 
@@ -12,7 +12,7 @@ export function NotFoundPage() {
     <div className="flex-1 flex items-center justify-center py-20 sm:py-32 bg-canvas">
       <div className="max-w-[1120px] mx-auto px-4 sm:px-6 text-center">
         <div className="max-w-md mx-auto">
-          <span className="text-sm font-mono font-bold text-maple uppercase tracking-widest block mb-2">
+          <span className="text-sm font-mono font-bold text-[#4B6300] dark:text-[#B9F000] uppercase tracking-widest block mb-2">
             404 Error
           </span>
           <h1 className="text-4xl sm:text-5xl font-extrabold font-heading text-ink tracking-tight mb-4">
@@ -34,11 +34,11 @@ export function NotFoundPage() {
 
           <div className="pt-8 border-t border-line text-xs text-secondary">
             Looking for something specific? Browse our{" "}
-            <Link href="/blog" className="text-primary-spruce underline">
+            <Link href="/blog" className="text-[#4B6300] dark:text-[#B9F000] underline font-medium hover:text-ink">
               Knowledge Base & Blog
             </Link>{" "}
             or{" "}
-            <Link href="/contact" className="text-primary-spruce underline">
+            <Link href="/contact" className="text-[#4B6300] dark:text-[#B9F000] underline font-medium hover:text-ink">
               contact our team
             </Link>.
           </div>

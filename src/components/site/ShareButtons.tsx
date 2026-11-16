@@ -61,8 +61,8 @@ export function ShareButtons({ title, url }: ShareButtonsProps) {
       >
         {copied ? (
           <>
-            <Check className="w-3.5 h-3.5 text-primary-spruce" />
-            <span className="text-primary-spruce">Copied</span>
+            <Check className="w-3.5 h-3.5 text-[#4B6300] dark:text-[#B9F000]" />
+            <span className="text-[#4B6300] dark:text-[#B9F000]">Copied</span>
           </>
         ) : (
           <Link2 className="w-3.5 h-3.5" />

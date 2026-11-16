@@ -1,4 +1,4 @@
-﻿import { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import Link from "@/components/common/Link";
 import Image from "@/components/common/Image";
@@ -75,18 +75,18 @@ function AdminLayoutInner({ children }: { children?: React.ReactNode }) {
       {/* Brand & Close Button (on mobile) */}
       <div className="h-16 sm:h-20 px-5 sm:px-6 flex items-center justify-between border-b border-line">
         <Link href="/admin" className="flex items-center gap-3 select-none">
-          <div className="relative w-32 h-10 sm:w-40 sm:h-12 shrink-0 flex items-center justify-center">
+          <div className="w-10 h-10 rounded-xl bg-[#0B0E0B] border border-[#22291C] p-1.5 shrink-0 flex items-center justify-center shadow-xs">
             <Image
-              src="/logo (2).png"
+              src="/Angular White and Neon Lime Logo.png"
               alt="Aakaar Digital"
-              width={160}
-              height={48}
+              width={36}
+              height={36}
               className="w-full h-full object-contain"
             />
           </div>
           <div className="flex flex-col justify-center">
             <span className="font-heading font-extrabold text-[15px] sm:text-[16px] leading-none tracking-[-0.02em] text-[#14232B] dark:text-white">
-              Aakaar Digital <span className="text-[#0F5C4D] dark:text-[#3FB89C]">Admin</span>
+              Aakaar Digital <span className="text-[#4B6300] dark:text-[#B9F000]">Admin</span>
             </span>
             <span className="text-[9px] sm:text-[10px] text-[#52636A] dark:text-[#B9C8C4] font-semibold uppercase tracking-[0.07em] leading-none mt-1">
               MANAGEMENT PORTAL
@@ -191,18 +191,18 @@ function AdminLayoutInner({ children }: { children?: React.ReactNode }) {
           >
             <Menu className="w-5 h-5" />
           </button>
-          <Link href="/admin" className="flex items-center gap-2">
-            <div className="w-28 h-8 relative shrink-0">
+          <Link href="/admin" className="flex items-center gap-2.5">
+            <div className="w-8 h-8 rounded-lg bg-[#0B0E0B] border border-[#22291C] p-1 shrink-0 flex items-center justify-center shadow-xs">
               <Image
-              src="/logo (2).png"
+                src="/Angular White and Neon Lime Logo.png"
                 alt="Aakaar Digital"
-                width={112}
-                height={32}
+                width={28}
+                height={28}
                 className="w-full h-full object-contain"
               />
             </div>
             <span className="font-heading font-bold text-sm text-ink">
-              Admin <span className="text-primary-spruce">Portal</span>
+              Admin <span className="text-[#4B6300] dark:text-[#B9F000]">Portal</span>
             </span>
           </Link>
         </div>

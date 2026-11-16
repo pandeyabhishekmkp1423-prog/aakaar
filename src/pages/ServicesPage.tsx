@@ -1,4 +1,4 @@
-﻿import Link from "@/components/common/Link";
+import Link from "@/components/common/Link";
 import { SERVICES_DATA } from "@/lib/services-data";
 import FeatureCard from "@/components/site/FeatureCard";
 import { JsonLd } from "@/components/site/JsonLd";
@@ -13,14 +13,13 @@ import {
   Cpu,
   ShieldCheck,
   ArrowRight,
-  Code,
 } from "lucide-react";
 
 export default function ServicesIndexPage() {
   useSEO({
-    title: "Software & IT Solutions | Aakaar Digital",
+    title: "Worldwide Digital Marketing & Enterprise IT Solutions | Aakaar Digital",
     description:
-      "Explore our suite of 8 core software & IT services: web development, mobile apps, custom software, CRM solutions, LMS platforms, WhatsApp automation, integrations, and maintenance worldwide.",
+      "Explore Aakaar Digital's complete suite of global digital marketing and enterprise IT solutions: high-ROAS paid media, technical SEO, custom web platforms, mobile apps, CRM systems, WhatsApp automations, and cloud infrastructure.",
     canonical: "/services",
   });
 
@@ -30,14 +29,14 @@ export default function ServicesIndexPage() {
   ];
 
   const iconMap: Record<string, React.ReactNode> = {
-    "web-development": <Globe className="w-5 h-5 text-primary-spruce" />,
-    "mobile-app-development": <Smartphone className="w-5 h-5 text-primary-spruce" />,
-    "custom-software": <Code2 className="w-5 h-5 text-primary-spruce" />,
-    "crm-solutions": <Users className="w-5 h-5 text-primary-spruce" />,
-    "lms-platforms": <GraduationCap className="w-5 h-5 text-primary-spruce" />,
-    "whatsapp-automation": <MessageSquare className="w-5 h-5 text-primary-spruce" />,
-    "integrations-automation": <Cpu className="w-5 h-5 text-primary-spruce" />,
-    "maintenance-support": <ShieldCheck className="w-5 h-5 text-primary-spruce" />,
+    "web-development": <Globe className="w-5 h-5 text-[#151A0C] dark:text-[#B9F000]" />,
+    "mobile-app-development": <Smartphone className="w-5 h-5 text-[#151A0C] dark:text-[#B9F000]" />,
+    "custom-software": <Code2 className="w-5 h-5 text-[#151A0C] dark:text-[#B9F000]" />,
+    "crm-solutions": <Users className="w-5 h-5 text-[#151A0C] dark:text-[#B9F000]" />,
+    "lms-platforms": <GraduationCap className="w-5 h-5 text-[#151A0C] dark:text-[#B9F000]" />,
+    "whatsapp-automation": <MessageSquare className="w-5 h-5 text-[#151A0C] dark:text-[#B9F000]" />,
+    "integrations-automation": <Cpu className="w-5 h-5 text-[#151A0C] dark:text-[#B9F000]" />,
+    "maintenance-support": <ShieldCheck className="w-5 h-5 text-[#151A0C] dark:text-[#B9F000]" />,
   };
 
   const servicesList = Object.values(SERVICES_DATA);
@@ -50,24 +49,27 @@ export default function ServicesIndexPage() {
       <section className="pt-12 pb-16 sm:pt-20 sm:pb-24 border-b border-line bg-canvas">
         <div className="max-w-[1160px] mx-auto px-4 sm:px-6">
           <div className="max-w-3xl">
+            <span className="text-xs font-bold text-[#4B6300] dark:text-[#B9F000] uppercase tracking-wider block mb-2">
+              Global Growth &amp; Technology Directory
+            </span>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-ink font-heading tracking-tight mb-6">
-              Our 8 Core Software & IT Solutions
+              Worldwide Digital Marketing &amp; Enterprise IT Solutions
             </h1>
             <p className="text-base sm:text-lg text-secondary leading-relaxed prose-measure">
-              Every system we engineer is built to solve concrete operational bottlenecks for growing businesses and enterprises worldwide. Zero bloated templates, zero unnecessary per-seat licenses, and full intellectual property ownership.
+              Every system and campaign we engineer is built to drive measurable revenue growth and eliminate operational bottlenecks for businesses worldwide. From global SEO and high-ROAS paid media to full-stack Next.js web applications, custom CRMs, and WhatsApp API automations.
             </p>
           </div>
         </div>
       </section>
 
-      {/* 8 Cards Grid (1 Mobile / 2 Tablet / 4 Desktop) in Clean Appen-style Cards */}
+      {/* 8 Cards Grid */}
       <section className="py-16 sm:py-20 lg:py-24 border-b border-line bg-surface">
         <div className="max-w-[1240px] mx-auto px-5 sm:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-            <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-extrabold font-heading text-gray-900 dark:text-white tracking-[-0.03em] mb-4 leading-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-extrabold font-heading text-ink tracking-[-0.03em] mb-4 leading-tight">
               Software services directory
             </h2>
-            <p className="text-base sm:text-[17px] text-gray-600 dark:text-[#A0B5AE] leading-relaxed">
+            <p className="text-base sm:text-[17px] text-secondary leading-relaxed">
               Explore our core technical specialisms below for detailed use cases, architecture roadmaps, and project deliverables.
             </p>
           </div>
@@ -90,18 +92,18 @@ export default function ServicesIndexPage() {
       {/* Custom Multi-Service Consultation CTA */}
       <section className="py-14 sm:py-20 bg-canvas">
         <div className="max-w-[1160px] mx-auto px-4 sm:px-6">
-          <div className="rounded-xl p-6 sm:p-10 bg-white dark:bg-[#11201C] border border-[#DCE4E1] dark:border-[#1C332D] shadow-xs flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <div className="rounded-xl p-6 sm:p-10 bg-white dark:bg-[#151711] border border-[#DCE3D6] dark:border-[#22291C] shadow-xs flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
             <div className="max-w-xl">
               <h2 className="text-xl sm:text-2xl font-bold font-heading text-ink mb-2">
                 Need a Cross-Functional Engineering Assessment?
               </h2>
               <p className="text-xs sm:text-sm text-secondary leading-relaxed">
-                Most complex systems combine multiple domainsâ€”such as a custom web portal with WhatsApp automated dispatch and QuickBooks sync. We architect unified solution roadmaps.
+                Most complex systems combine multiple domains — such as a custom web portal with WhatsApp automated dispatch and QuickBooks sync. We architect unified solution roadmaps.
               </p>
             </div>
             <Link
               href="/contact"
-              className="btn-primary w-full sm:w-auto text-center text-sm shrink-0 min-h-[46px] justify-center"
+              className="btn-primary w-full sm:w-auto text-center text-sm shrink-0 min-h-[46px] justify-center group"
             >
               <span>Request consultation</span>
               <ArrowRight className="w-4 h-4 ml-2" />
@@ -112,4 +114,3 @@ export default function ServicesIndexPage() {
     </>
   );
 }
-

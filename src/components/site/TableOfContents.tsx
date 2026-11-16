@@ -73,7 +73,7 @@ export function TableOfContents({ contentHtml, isMobile = false }: TableOfConten
           className="w-full px-4 py-3 flex items-center justify-between text-xs font-bold uppercase tracking-wider text-ink cursor-pointer hover:bg-mist transition-colors min-h-[44px]"
         >
           <span className="flex items-center gap-2">
-            <List className="w-4 h-4 text-primary-spruce" />
+            <List className="w-4 h-4 text-[#4B6300] dark:text-[#B9F000]" />
             <span>Table of Contents ({headings.length})</span>
           </span>
           <ChevronDown
@@ -96,7 +96,7 @@ export function TableOfContents({ contentHtml, isMobile = false }: TableOfConten
                       document.getElementById(item.id)?.scrollIntoView({ behavior: "smooth" });
                       setMobileOpen(false);
                     }}
-                    className="block text-left w-full text-secondary hover:text-primary-spruce py-1 leading-snug cursor-pointer"
+                    className="block text-left w-full text-secondary hover:text-[#4B6300] dark:hover:text-[#B9F000] py-1 leading-snug cursor-pointer"
                   >
                     {item.text}
                   </button>
@@ -115,7 +115,7 @@ export function TableOfContents({ contentHtml, isMobile = false }: TableOfConten
       aria-label="Table of contents"
     >
       <h3 className="font-heading font-semibold text-sm uppercase tracking-wider text-secondary mb-4 flex items-center gap-2">
-        <List className="w-4 h-4 text-primary-spruce" />
+        <List className="w-4 h-4 text-[#4B6300] dark:text-[#B9F000]" />
         <span>On This Page</span>
       </h3>
       <ul className="space-y-2.5 text-sm">
@@ -131,7 +131,7 @@ export function TableOfContents({ contentHtml, isMobile = false }: TableOfConten
               }}
               className={`block text-left w-full transition-colors leading-snug cursor-pointer ${
                 activeId === item.id
-                  ? "text-primary-spruce font-semibold underline"
+                  ? "text-[#4B6300] dark:text-[#B9F000] font-semibold underline"
                   : "text-secondary hover:text-ink"
               }`}
             >

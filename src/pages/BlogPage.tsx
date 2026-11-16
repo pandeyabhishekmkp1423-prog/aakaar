@@ -1,10 +1,10 @@
-﻿import { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import Link from "@/components/common/Link";
 import { getBreadcrumbSchema, useSEO } from "@/lib/seo";
 import { JsonLd } from "@/components/site/JsonLd";
 import { fetchApi, getMediaUrl } from "@/lib/api-client";
-import { Search, Clock, ArrowRight, ArrowLeft, Tag, Loader2 } from "lucide-react";
+import { Search, ArrowRight, ArrowLeft, Loader2 } from "lucide-react";
 
 export default function BlogIndexPage() {
   useSEO({
@@ -88,7 +88,7 @@ export default function BlogIndexPage() {
       <section className="pt-12 pb-16 sm:pt-20 sm:pb-20 border-b border-line bg-canvas">
         <div className="max-w-[1120px] mx-auto px-4 sm:px-6">
           <div className="max-w-3xl">
-            <span className="text-xs font-bold text-primary-spruce uppercase tracking-wider block mb-2">
+            <span className="text-xs font-bold text-[#151A0C] dark:text-[#B9F000] uppercase tracking-wider block mb-2">
               Digital Engineering & Strategy
             </span>
             <h1 className="text-4xl sm:text-5xl font-extrabold text-ink font-heading tracking-tight mb-6">
@@ -110,10 +110,10 @@ export default function BlogIndexPage() {
             <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
               <Link
                 href="/blog"
-                className={`text-xs sm:text-sm font-semibold px-3 py-1.5 rounded-lg border transition-colors ${
+                className={`text-xs sm:text-sm font-semibold px-3.5 py-1.5 rounded-lg border transition-all ${
                   !category
-                    ? "bg-primary-spruce text-white border-primary-spruce"
-                    : "bg-surface text-secondary border-line hover:border-primary-spruce hover:text-ink"
+                    ? "btn-primary !min-h-[36px] !px-3.5 !py-1 !text-xs !shadow-sm"
+                    : "bg-surface text-secondary border-line hover:border-[#AEDD00] hover:text-ink"
                 }`}
               >
                 All Articles
@@ -122,10 +122,10 @@ export default function BlogIndexPage() {
                 <Link
                   key={c.id}
                   href={`/blog?category=${c.slug}`}
-                  className={`text-xs sm:text-sm font-semibold px-3 py-1.5 rounded-lg border transition-colors ${
+                  className={`text-xs sm:text-sm font-semibold px-3.5 py-1.5 rounded-lg border transition-all ${
                     category === c.slug
-                      ? "bg-primary-spruce text-white border-primary-spruce"
-                      : "bg-surface text-secondary border-line hover:border-primary-spruce hover:text-ink"
+                      ? "btn-primary !min-h-[36px] !px-3.5 !py-1 !text-xs !shadow-sm"
+                      : "bg-surface text-secondary border-line hover:border-[#AEDD00] hover:text-ink"
                   }`}
                 >
                   {c.name}
@@ -141,23 +141,23 @@ export default function BlogIndexPage() {
                 value={searchInput}
                 onChange={(e) => setSearchInput(e.target.value)}
                 placeholder="Search articles..."
-                className="w-full pl-9 pr-4 py-2.5 text-base sm:text-sm rounded-lg border border-line bg-canvas text-ink focus:ring-2 focus:ring-primary-spruce focus:outline-none min-h-[44px]"
+                className="w-full pl-9 pr-4 py-2.5 text-base sm:text-sm rounded-lg border border-line bg-canvas text-ink focus:ring-2 focus:ring-[#B9F000] focus:outline-none min-h-[44px]"
               />
-              <Search className="w-4 h-4 text-secondary absolute left-3 top-3" />
+              <Search className="w-4 h-4 text-secondary absolute left-3 top-3.5" />
             </form>
           </div>
 
           {/* Loading Indicator */}
           {loading ? (
             <div className="flex justify-center py-20">
-              <Loader2 className="w-8 h-8 animate-spin text-primary-spruce" />
+              <Loader2 className="w-8 h-8 animate-spin text-[#151A0C] dark:text-[#B9F000]" />
             </div>
           ) : posts.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7 mb-12">
               {posts.map((post: any, idx: number) => (
                 <article
                   key={post.id}
-                  className="bg-white dark:bg-[#11201C] border border-[#DCE4E1] dark:border-[#1C332D] rounded-xl p-6 sm:p-7 flex flex-col justify-between transition-all duration-200 hover:border-[#0F5C4D] dark:hover:border-[#3FB89C] hover:shadow-[0_12px_32px_rgba(15,92,77,0.08)] hover:-translate-y-0.5 group"
+                  className="bg-white dark:bg-[#151711] border border-[#DCE3D6] dark:border-[#22291C] rounded-xl p-6 sm:p-7 flex flex-col justify-between transition-all duration-200 hover:border-[#AEDD00] dark:hover:border-[#B9F000] hover:shadow-[0_12px_32px_rgba(185,240,0,0.10)] hover:-translate-y-0.5 group"
                 >
                   <div>
                     {post.cover_image && (
@@ -172,19 +172,19 @@ export default function BlogIndexPage() {
                         />
                       </div>
                     )}
-                    <span className="font-mono text-xs font-semibold text-[#8B9DA3] dark:text-[#5E7A72] group-hover:text-[#0F5C4D] dark:group-hover:text-[#3FB89C] transition-colors mb-2 block select-none">
+                    <span className="font-mono text-xs font-semibold text-[#8B9685] dark:text-[#A2A69B] group-hover:text-[#151A0C] dark:group-hover:text-[#B9F000] transition-colors mb-2 block select-none">
                       {`0${idx + 1}`}
                     </span>
-                    <h2 className="text-base sm:text-lg font-bold font-heading text-[#14232B] dark:text-white mb-2.5 group-hover:text-[#0F5C4D] dark:group-hover:text-[#3FB89C] transition-colors leading-snug">
+                    <h2 className="text-base sm:text-lg font-bold font-heading text-ink mb-2.5 group-hover:text-[#151A0C] dark:group-hover:text-[#B9F000] transition-colors leading-snug">
                       <Link href={`/blog/${post.slug}`}>{post.title}</Link>
                     </h2>
-                    <p className="text-xs sm:text-sm text-[#41545C] dark:text-[#A0B5AE] line-clamp-3 leading-relaxed mb-4">
+                    <p className="text-xs sm:text-sm text-secondary line-clamp-3 leading-relaxed mb-4">
                       {post.excerpt}
                     </p>
                   </div>
                   <Link
                     href={`/blog/${post.slug}`}
-                    className="inline-flex items-center text-xs font-semibold text-[#0F5C4D] dark:text-[#3FB89C] hover:underline"
+                    className="inline-flex items-center text-xs font-semibold text-[#151A0C] dark:text-[#B9F000] hover:underline group"
                   >
                     <span>Read perspective</span>
                     <ArrowRight className="w-3.5 h-3.5 ml-1.5 group-hover:translate-x-1 transition-transform" />
@@ -253,4 +253,3 @@ export default function BlogIndexPage() {
     </>
   );
 }
-

@@ -1,4 +1,4 @@
-﻿import Link from "@/components/common/Link";
+import Link from "@/components/common/Link";
 import { EnquiryForm } from "@/components/site/EnquiryForm";
 import { getBreadcrumbSchema, useSEO } from "@/lib/seo";
 import { JsonLd } from "@/components/site/JsonLd";
@@ -25,7 +25,7 @@ export default function ContactPage() {
       <section className="pt-12 pb-16 sm:pt-20 sm:pb-20 border-b border-line bg-canvas">
         <div className="max-w-[1160px] mx-auto px-4 sm:px-6">
           <div className="max-w-3xl">
-            <span className="text-xs font-bold text-primary-spruce uppercase tracking-wider block mb-2">
+            <span className="text-xs font-bold text-[#4B6300] dark:text-[#B9F000] uppercase tracking-wider block mb-2">
               Engineering Consultation & Inquiries
             </span>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-ink font-heading tracking-tight mb-6">
@@ -53,9 +53,9 @@ export default function ContactPage() {
                   Our engineering leads are available Monday through Friday across North American and European business hours. Critical production support for active maintenance SLA clients is monitored 24/7 globally.
                 </p>
 
-                <div className="bg-white dark:bg-[#11201C] border border-[#DCE4E1] dark:border-[#1C332D] rounded-xl divide-y divide-[#DCE4E1] dark:divide-[#1C332D] overflow-hidden shadow-xs text-xs sm:text-sm">
-                  <div className="flex items-start gap-4 p-5 hover:bg-[#F2F5F4] dark:hover:bg-[#152B24] transition-colors group">
-                    <div className="w-10 h-10 rounded-lg bg-[#E3EFEA] dark:bg-[#14352C] flex items-center justify-center text-[#0F5C4D] dark:text-[#3FB89C] shrink-0 mt-0.5">
+                <div className="bg-white dark:bg-[#151711] border border-[#DCE3D6] dark:border-[#22291C] rounded-xl divide-y divide-[#DCE3D6] dark:divide-[#22291C] overflow-hidden shadow-xs text-xs sm:text-sm">
+                  <div className="flex items-start gap-4 p-5 hover:bg-[#F1F5ED] dark:hover:bg-[#151A0C] transition-colors group">
+                    <div className="w-10 h-10 rounded-lg bg-[#E8EDE4] dark:bg-[#151A0C] flex items-center justify-center text-[#151A0C] dark:text-[#B9F000] shrink-0 mt-0.5">
                       <Mail className="w-5 h-5" />
                     </div>
                     <div>
@@ -64,18 +64,18 @@ export default function ContactPage() {
                       </div>
                       <a
                         href="mailto:info@aakaardigital.com"
-                        className="text-sm sm:text-base font-bold text-[#14232B] dark:text-white group-hover:text-[#0F5C4D] dark:group-hover:text-[#3FB89C] transition-colors"
+                        className="text-sm sm:text-base font-bold text-[#14232B] dark:text-white group-hover:text-[#4B6300] dark:group-hover:text-[#B9F000] transition-colors"
                       >
                         info@aakaardigital.com
                       </a>
-                      <div className="text-xs text-[#41545C] dark:text-gray-400 mt-0.5">
+                      <div className="text-xs text-[#5A6054] dark:text-gray-400 mt-0.5">
                         Average response time: &lt; 4 hours
                       </div>
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-4 p-5 hover:bg-[#F2F5F4] dark:hover:bg-[#152B24] transition-colors group">
-                    <div className="w-10 h-10 rounded-lg bg-[#E3EFEA] dark:bg-[#14352C] flex items-center justify-center text-[#0F5C4D] dark:text-[#3FB89C] shrink-0 mt-0.5">
+                  <div className="flex items-start gap-4 p-5 hover:bg-[#F1F5ED] dark:hover:bg-[#151A0C] transition-colors group">
+                    <div className="w-10 h-10 rounded-lg bg-[#E8EDE4] dark:bg-[#151A0C] flex items-center justify-center text-[#151A0C] dark:text-[#B9F000] shrink-0 mt-0.5">
                       <Phone className="w-5 h-5" />
                     </div>
                     <div>
@@ -84,18 +84,18 @@ export default function ContactPage() {
                       </div>
                       <a
                         href="tel:+18005550199"
-                        className="text-sm sm:text-base font-bold text-[#14232B] dark:text-white group-hover:text-[#0F5C4D] dark:group-hover:text-[#3FB89C] transition-colors"
+                        className="text-sm sm:text-base font-bold text-[#14232B] dark:text-white group-hover:text-[#4B6300] dark:group-hover:text-[#B9F000] transition-colors"
                       >
                         +1 (800) 555-0199
                       </a>
-                      <div className="text-xs text-[#41545C] dark:text-gray-400 mt-0.5">
-                        Monâ€“Fri, 9amâ€“6pm EST
+                      <div className="text-xs text-[#5A6054] dark:text-gray-400 mt-0.5">
+                        Mon–Fri, 9am–6pm EST
                       </div>
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-4 p-5 bg-[#FAFBFB] dark:bg-[#0E1B17]">
-                    <div className="w-10 h-10 rounded-lg bg-[#E3EFEA] dark:bg-[#14352C] flex items-center justify-center text-[#0F5C4D] dark:text-[#3FB89C] shrink-0 mt-0.5">
+                  <div className="flex items-start gap-4 p-5 bg-[#F1F5ED] dark:bg-[#0B0E09]">
+                    <div className="w-10 h-10 rounded-lg bg-[#E8EDE4] dark:bg-[#151A0C] flex items-center justify-center text-[#151A0C] dark:text-[#B9F000] shrink-0 mt-0.5">
                       <MapPin className="w-5 h-5" />
                     </div>
                     <div>
@@ -105,7 +105,7 @@ export default function ContactPage() {
                       <span className="text-sm font-bold text-[#14232B] dark:text-white">
                         Worldwide Enterprise Delivery
                       </span>
-                      <div className="text-xs text-[#41545C] dark:text-gray-400 mt-0.5">
+                      <div className="text-xs text-[#5A6054] dark:text-gray-400 mt-0.5">
                         Seamless collaboration across North American, European, and global timezones
                       </div>
                     </div>
@@ -114,12 +114,12 @@ export default function ContactPage() {
               </div>
 
               {/* Privacy Guarantee Panel */}
-              <div className="rounded-xl p-6 bg-white dark:bg-[#11201C] border border-[#0F5C4D]/25 dark:border-[#1C332D]">
+              <div className="rounded-xl p-6 bg-white dark:bg-[#151711] border border-[#AEDD00]/40 dark:border-[#22291C]">
                 <div className="flex items-center gap-2 font-bold text-sm text-[#14232B] dark:text-white mb-2">
-                  <Shield className="w-4 h-4 text-primary-spruce dark:text-[#3FB89C]" />
+                  <Shield className="w-4 h-4 text-[#4B6300] dark:text-[#B9F000]" />
                   <span>Enterprise Privacy & Security Guarantee</span>
                 </div>
-                <p className="text-xs text-[#41545C] dark:text-[#A0B5AE] leading-relaxed">
+                <p className="text-xs text-[#5A6054] dark:text-[#A2A69B] leading-relaxed">
                   We process your inquiry under strict confidentiality in compliance with international privacy frameworks (GDPR, PIPEDA, CCPA). We never sell, lease, or monetize your corporate data.
                 </p>
               </div>

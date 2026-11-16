@@ -1,4 +1,4 @@
-﻿import { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import Link from "@/components/common/Link";
 import { fetchApi, getMediaUrl } from "@/lib/api-client";
@@ -61,7 +61,7 @@ export default function BlogPostPage() {
   if (loading) {
     return (
       <div className="flex justify-center py-32 bg-surface">
-        <Loader2 className="w-8 h-8 animate-spin text-primary-spruce" />
+        <Loader2 className="w-8 h-8 animate-spin text-[#151A0C] dark:text-[#B9F000]" />
       </div>
     );
   }
@@ -109,14 +109,14 @@ export default function BlogPostPage() {
           <div className="flex items-center justify-between gap-4 mb-6 text-xs text-secondary">
             <Link
               href="/blog"
-              className="inline-flex items-center gap-1.5 font-semibold text-primary-spruce hover:underline"
+              className="inline-flex items-center gap-1.5 font-semibold text-[#151A0C] dark:text-[#B9F000] hover:underline"
             >
               <ArrowLeft className="w-3.5 h-3.5" />
               <span>Back to all insights</span>
             </Link>
 
             {post.categories?.[0] && (
-              <span className="flex items-center gap-1 bg-mist text-primary-spruce px-2.5 py-1 rounded-md font-semibold">
+              <span className="flex items-center gap-1 bg-[#E8EDE4] dark:bg-[#151A0C] text-[#151A0C] dark:text-[#B9F000] px-2.5 py-1 rounded-md font-semibold">
                 <Tag className="w-3 h-3" />
                 {post.categories[0].name}
               </span>
@@ -131,17 +131,17 @@ export default function BlogPostPage() {
 
             <div className="flex flex-wrap items-center gap-6 text-xs sm:text-sm text-secondary pb-6 border-b border-line">
               <span className="flex items-center gap-2">
-                <User className="w-4 h-4 text-primary-spruce" />
+                <User className="w-4 h-4 text-[#4B6300] dark:text-[#B9F000]" />
                 <span>By {post.author_name || "Aakaar Digital Editorial"}</span>
               </span>
               {formattedDate && (
                 <span className="flex items-center gap-2">
-                  <Calendar className="w-4 h-4 text-primary-spruce" />
+                  <Calendar className="w-4 h-4 text-[#4B6300] dark:text-[#B9F000]" />
                   <span>{formattedDate}</span>
                 </span>
               )}
               <span className="flex items-center gap-2">
-                <Clock className="w-4 h-4 text-primary-spruce" />
+                <Clock className="w-4 h-4 text-[#4B6300] dark:text-[#B9F000]" />
                 <span>{post.reading_time || 5} min read</span>
               </span>
             </div>
@@ -171,7 +171,7 @@ export default function BlogPostPage() {
               </div>
 
               {post.excerpt && (
-                <div className="p-5 sm:p-6 rounded-xl bg-mist/60 border border-primary-spruce/20 text-base sm:text-lg text-ink font-medium leading-relaxed mb-8">
+                <div className="p-5 sm:p-6 rounded-xl bg-[#E8EDE4] dark:bg-[#151A0C] border border-[#AEDD00]/40 dark:border-[#22291C] text-base sm:text-lg text-ink font-medium leading-relaxed mb-8">
                   {post.excerpt}
                 </div>
               )}
@@ -189,7 +189,7 @@ export default function BlogPostPage() {
                     <Link
                       key={cat.id}
                       href={`/blog?category=${cat.slug}`}
-                      className="text-xs font-semibold px-3 py-1.5 rounded-lg border border-line bg-canvas text-secondary hover:text-ink hover:border-primary-spruce transition-colors"
+                      className="text-xs font-semibold px-3 py-1.5 rounded-lg border border-line bg-canvas text-secondary hover:text-ink hover:border-[#AEDD00] dark:hover:border-[#B9F000] transition-colors"
                     >
                       {cat.name}
                     </Link>
@@ -220,25 +220,25 @@ export default function BlogPostPage() {
               {post.related_posts.map((rel: any, idx: number) => (
                 <article
                   key={rel.id}
-                  className="bg-white dark:bg-[#11201C] border border-[#DCE4E1] dark:border-[#1C332D] rounded-xl p-6 sm:p-7 flex flex-col justify-between transition-all duration-200 hover:border-[#0F5C4D] dark:hover:border-[#3FB89C] hover:shadow-[0_12px_32px_rgba(15,92,77,0.08)] group"
+                  className="bg-white dark:bg-[#151711] border border-[#DCE3D6] dark:border-[#22291C] rounded-xl p-6 sm:p-7 flex flex-col justify-between transition-all duration-200 hover:border-[#AEDD00] dark:hover:border-[#B9F000] hover:shadow-[0_12px_32px_rgba(185,240,0,0.10)] group"
                 >
                   <div>
-                    <span className="font-mono text-xs font-semibold text-[#8B9DA3] dark:text-[#5E7A72] group-hover:text-[#0F5C4D] dark:group-hover:text-[#3FB89C] transition-colors mb-3 sm:mb-4 block select-none">
+                    <span className="font-mono text-xs font-semibold text-[#8B9685] dark:text-[#A2A69B] group-hover:text-[#151A0C] dark:group-hover:text-[#B9F000] transition-colors mb-3 sm:mb-4 block select-none">
                       {`0${idx + 1}`}
                     </span>
-                    <h3 className="text-base sm:text-lg font-bold font-heading text-[#14232B] dark:text-white group-hover:text-[#0F5C4D] dark:group-hover:text-[#3FB89C] transition-colors mb-2 leading-snug">
+                    <h3 className="text-base sm:text-lg font-bold font-heading text-ink group-hover:text-[#151A0C] dark:group-hover:text-[#B9F000] transition-colors mb-2 leading-snug">
                       <Link href={`/blog/${rel.slug}`}>{rel.title}</Link>
                     </h3>
-                    <p className="text-xs sm:text-sm text-[#41545C] dark:text-[#A0B5AE] line-clamp-3 leading-relaxed mb-4">
+                    <p className="text-xs sm:text-sm text-secondary line-clamp-3 leading-relaxed mb-4">
                       {rel.excerpt}
                     </p>
                   </div>
                   <Link
                     href={`/blog/${rel.slug}`}
-                    className="inline-flex items-center text-xs font-semibold text-[#0F5C4D] dark:text-[#3FB89C] hover:underline"
+                    className="inline-flex items-center text-xs font-semibold text-[#151A0C] dark:text-[#B9F000] hover:underline group"
                   >
                     <span>Read perspective</span>
-                    <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
+                    <ArrowRight className="w-3.5 h-3.5 ml-1.5 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </article>
               ))}
@@ -250,8 +250,8 @@ export default function BlogPostPage() {
       {/* Closing Enquiry CTA */}
       <section className="py-16 sm:py-20 bg-surface border-t border-line">
         <div className="max-w-[1120px] mx-auto px-4 sm:px-6 text-center">
-          <div className="rounded-xl p-8 sm:p-12 bg-white dark:bg-[#11201C] border border-[#DCE4E1] dark:border-[#1C332D] shadow-xs max-w-3xl mx-auto">
-            <span className="font-mono text-xs font-bold text-[#0F5C4D] dark:text-[#3FB89C] tracking-wider uppercase mb-3 block select-none">
+          <div className="rounded-xl p-8 sm:p-12 bg-white dark:bg-[#151711] border border-[#DCE3D6] dark:border-[#22291C] shadow-xs max-w-3xl mx-auto">
+            <span className="font-mono text-xs font-bold text-[#151A0C] dark:text-[#B9F000] tracking-wider uppercase mb-3 block select-none">
               08 / Architectural Consultation
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold font-heading text-ink mb-3">
@@ -260,7 +260,7 @@ export default function BlogPostPage() {
             <p className="text-secondary text-sm sm:text-base max-w-xl mx-auto mb-6 leading-relaxed">
               Our software engineering and IT specialists are ready to help you analyze, plan, and execute with full IP ownership.
             </p>
-            <Link href="/contact" className="btn-primary min-h-[46px] px-8 text-sm font-semibold">
+            <Link href="/contact" className="btn-primary min-h-[46px] px-8 text-sm font-semibold group">
               <span>Book a free consultation</span>
               <ArrowRight className="w-4 h-4 ml-2" />
             </Link>

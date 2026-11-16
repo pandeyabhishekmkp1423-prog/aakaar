@@ -1,4 +1,4 @@
-﻿import Link from "@/components/common/Link";
+import Link from "@/components/common/Link";
 import { Scale, CheckCircle2 } from "lucide-react";
 import { useSEO } from "@/lib/seo";
 
@@ -16,7 +16,7 @@ export default function TermsPage() {
     <div className="py-16 sm:py-20 max-w-[1160px] mx-auto px-4 sm:px-6">
       {/* Header */}
       <div className="max-w-3xl mb-12">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-mist text-primary-spruce text-xs font-semibold mb-4">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E8EDE4] dark:bg-[#151A0C] text-[#151A0C] dark:text-[#B9F000] text-xs font-semibold mb-4">
           <Scale className="w-3.5 h-3.5" />
           <span>Commercial Agreement Framework</span>
         </div>
@@ -56,7 +56,7 @@ export default function TermsPage() {
                   onClick={() => {
                     document.getElementById(item.id)?.scrollIntoView({ behavior: "smooth" });
                   }}
-                  className="text-left hover:text-primary-spruce py-1 transition-colors cursor-pointer"
+                  className="text-left hover:text-[#4B6300] dark:hover:text-[#B9F000] py-1 transition-colors cursor-pointer"
                 >
                   {item.label}
                 </button>
@@ -81,7 +81,7 @@ export default function TermsPage() {
             <h2 className="text-xl sm:text-2xl font-bold font-heading text-ink pt-2">
               2. Enquiries and Quotes Are Not Contracts
             </h2>
-            <div className="p-4 rounded-xl bg-mist border border-primary-spruce/20 text-ink text-xs sm:text-sm leading-relaxed">
+            <div className="p-4 rounded-xl bg-[#E8EDE4] dark:bg-[#151A0C] border border-[#AEDD00]/40 dark:border-[#22291C] text-ink text-xs sm:text-sm leading-relaxed">
               <strong>Crucial Contractual Boundary:</strong> Information, estimated timelines, or preliminary quote ranges provided through this website or preliminary email exchanges do not constitute a legally binding contract or commitment to perform services.
             </div>
             <p>
@@ -146,7 +146,7 @@ export default function TermsPage() {
             </h2>
             <p>
               Our collection and processing of personal information are governed by our comprehensive{" "}
-              <Link href="/privacy-policy" className="text-primary-spruce underline hover:text-ink font-semibold">
+              <Link href="/privacy-policy" className="text-[#4B6300] dark:text-[#B9F000] underline hover:text-ink font-semibold">
                 Privacy Policy
               </Link>
               , which is incorporated into these Terms by reference.
@@ -187,7 +187,7 @@ export default function TermsPage() {
             <p>For questions regarding these Terms or formal legal inquiries:</p>
             <div className="panel-card p-6 bg-surface space-y-1.5 text-xs sm:text-sm">
               <div className="font-bold text-ink">Aakaar Digital â€” Corporate Legal</div>
-              <div>Email: <a href="mailto:info@aakaardigital.com" className="text-primary-spruce underline">info@aakaardigital.com</a></div>
+              <div>Email: <a href="mailto:info@aakaardigital.com" className="text-[#4B6300] dark:text-[#B9F000] underline">info@aakaardigital.com</a></div>
               <div>Engineering bespoke software & IT solutions for businesses worldwide.</div>
             </div>
           </section>

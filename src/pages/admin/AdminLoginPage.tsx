@@ -1,4 +1,4 @@
-﻿import { useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Image from "@/components/common/Image";
 import { useAdminAuth } from "@/lib/admin-auth";
@@ -32,12 +32,12 @@ export default function AdminLoginPage() {
     <div className="min-h-screen flex items-center justify-center p-4 bg-canvas">
       <div className="w-full max-w-md panel-card p-8 sm:p-10 bg-surface shadow-xl">
         <div className="text-center mb-8">
-          <div className="relative w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+          <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-[#0B0E0B] border border-[#22291C] p-2.5 flex items-center justify-center shadow-lg">
             <Image
-              src="/logo (2).png"
+              src="/Angular White and Neon Lime Logo.png"
               alt="Aakaar Digital"
-              width={64}
-              height={64}
+              width={56}
+              height={56}
               priority
               className="w-full h-full object-contain"
             />

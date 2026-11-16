@@ -45,7 +45,7 @@ export const TipTapEditor = forwardRef<TipTapEditorRef, TipTapEditorProps>(
             rel: "noopener noreferrer",
             target: "_blank",
             class:
-              "text-[#0F5C4D] dark:text-[#3FB89C] font-semibold underline underline-offset-4 decoration-2 decoration-[#0F5C4D]/60 hover:decoration-[#0F5C4D] bg-[#0F5C4D]/10 dark:bg-[#3FB89C]/15 px-1.5 py-0.5 rounded transition-all",
+              "text-[#151A0C] dark:text-[#B9F000] font-semibold underline underline-offset-4 decoration-2 decoration-[#B9F000]/70 hover:decoration-[#B9F000] bg-[#B9F000]/15 dark:bg-[#B9F000]/12 px-1.5 py-0.5 rounded transition-all",
           },
         }),
         ImageExtension.configure({
@@ -70,11 +70,11 @@ export const TipTapEditor = forwardRef<TipTapEditorRef, TipTapEditorProps>(
             "[&>h5]:text-base [&>h5]:font-bold [&>h5]:mt-3 [&>h5]:mb-1.5 [&>h5]:text-ink [&>h5]:font-heading " +
             "[&>h6]:text-sm [&>h6]:font-bold [&>h6]:mt-3 [&>h6]:mb-1 [&>h6]:text-secondary [&>h6]:font-heading [&>h6]:uppercase [&>h6]:tracking-wider " +
             "[&>p]:mb-4 " +
-            "[&_a]:text-[#0F5C4D] dark:[&_a]:text-[#3FB89C] [&_a]:underline [&_a]:underline-offset-4 [&_a]:decoration-2 [&_a]:decoration-[#0F5C4D]/60 hover:[&_a]:decoration-[#0F5C4D] [&_a]:font-semibold [&_a]:bg-[#0F5C4D]/10 dark:[&_a]:bg-[#3FB89C]/15 [&_a]:px-1.5 [&_a]:py-0.5 [&_a]:rounded [&_a]:transition-all " +
+            "[&_a]:text-[#151A0C] dark:[&_a]:text-[#B9F000] [&_a]:underline [&_a]:underline-offset-4 [&_a]:decoration-2 [&_a]:decoration-[#B9F000]/70 hover:[&_a]:decoration-[#B9F000] [&_a]:font-semibold [&_a]:bg-[#B9F000]/15 dark:[&_a]:bg-[#B9F000]/12 [&_a]:px-1.5 [&_a]:py-0.5 [&_a]:rounded [&_a]:transition-all " +
             "[&_img]:max-w-full [&_img]:h-auto [&_img]:rounded-xl [&_img]:my-6 [&_img]:mx-auto [&_img]:border [&_img]:border-line [&_img]:shadow-md [&_img]:block " +
             "[&>ul]:list-disc [&>ul]:pl-6 [&>ul]:space-y-1.5 [&>ul]:mb-4 " +
             "[&>ol]:list-decimal [&>ol]:pl-6 [&>ol]:space-y-1.5 [&>ol]:mb-4 " +
-            "[&>blockquote]:border-l-4 [&>blockquote]:border-primary-spruce [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:my-4 [&>blockquote]:text-secondary " +
+            "[&>blockquote]:border-l-4 [&>blockquote]:border-[#B9F000] [&>blockquote]:pl-4 [&>blockquote]:italic [&>blockquote]:my-4 [&>blockquote]:text-secondary " +
             "[&>pre]:bg-canvas [&>pre]:p-4 [&>pre]:rounded-xl [&>pre]:border [&>pre]:border-line [&>pre]:font-mono [&>pre]:text-xs [&>pre]:overflow-x-auto [&>pre]:my-4",
         },
       },

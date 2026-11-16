@@ -1,4 +1,4 @@
-﻿import Link from "@/components/common/Link";
+import Link from "@/components/common/Link";
 import { Shield, Lock, FileText, CheckCircle2 } from "lucide-react";
 import { useSEO } from "@/lib/seo";
 
@@ -15,7 +15,7 @@ export default function PrivacyPolicyPage() {
     <div className="py-16 sm:py-20 max-w-[1160px] mx-auto px-4 sm:px-6">
       {/* Header */}
       <div className="max-w-3xl mb-12">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-mist text-primary-spruce text-xs font-semibold mb-4">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E8EDE4] dark:bg-[#151A0C] text-[#151A0C] dark:text-[#B9F000] text-xs font-semibold mb-4">
           <Shield className="w-3.5 h-3.5" />
           <span>Global Privacy Framework (GDPR, PIPEDA, CCPA)</span>
         </div>
@@ -55,7 +55,7 @@ export default function PrivacyPolicyPage() {
                   onClick={() => {
                     document.getElementById(item.id)?.scrollIntoView({ behavior: "smooth" });
                   }}
-                  className="text-left hover:text-primary-spruce py-1 transition-colors cursor-pointer"
+                  className="text-left hover:text-[#4B6300] dark:hover:text-[#B9F000] py-1 transition-colors cursor-pointer"
                 >
                   {item.label}
                 </button>
@@ -67,7 +67,7 @@ export default function PrivacyPolicyPage() {
                 href="https://www.priv.gc.ca/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-primary-spruce underline hover:text-ink font-medium"
+                className="text-[#4B6300] dark:text-[#B9F000] underline hover:text-ink font-medium"
               >
                 Office of the Privacy Commissioner of Canada (OPC)
               </a>
@@ -185,7 +185,7 @@ export default function PrivacyPolicyPage() {
                 href="https://www.priv.gc.ca/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-primary-spruce underline hover:text-ink font-medium"
+                className="text-[#4B6300] dark:text-[#B9F000] underline hover:text-ink font-medium"
               >
                 priv.gc.ca
               </a>{" "}
@@ -228,9 +228,9 @@ export default function PrivacyPolicyPage() {
               For questions, access requests, or privacy concerns, contact our designated Privacy Compliance Officer:
             </p>
             <div className="panel-card p-6 bg-surface space-y-1.5 text-xs sm:text-sm">
-              <div className="font-bold text-ink">Aakaar Digital â€” Privacy Officer</div>
-              <div>Email: <a href="mailto:privacy@aakaardigital.com" className="text-primary-spruce underline">privacy@aakaardigital.com</a></div>
-              <div>General Inquiries: <a href="mailto:info@aakaardigital.com" className="text-primary-spruce underline">info@aakaardigital.com</a></div>
+              <div className="font-bold text-ink">Aakaar Digital — Privacy Officer</div>
+              <div>Email: <a href="mailto:privacy@aakaardigital.com" className="text-[#4B6300] dark:text-[#B9F000] underline">privacy@aakaardigital.com</a></div>
+              <div>General Inquiries: <a href="mailto:info@aakaardigital.com" className="text-[#4B6300] dark:text-[#B9F000] underline">info@aakaardigital.com</a></div>
               <div>Jurisdiction: Ontario & Canada Federal</div>
             </div>
           </section>

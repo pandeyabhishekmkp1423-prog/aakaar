@@ -1,4 +1,4 @@
-﻿import { useParams, Navigate } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 import Link from "@/components/common/Link";
 import { INDUSTRIES_DATA } from "@/lib/industries-data";
 import { CASE_STUDIES } from "@/lib/case-studies-data";
@@ -10,7 +10,6 @@ import {
   CheckCircle2,
   ShieldCheck,
   Layers,
-  Sparkles,
   Truck,
   Stethoscope,
   Cpu,
@@ -59,30 +58,30 @@ export default function IndustryDetailPage() {
       <JsonLd data={getBreadcrumbSchema(breadcrumbs)} />
 
       {/* Hero Header */}
-      <section className="pt-12 pb-16 sm:pt-20 sm:pb-24 border-b border-[#DCE4E1] dark:border-[#1C332D] bg-[#FAFCFB] dark:bg-[#0C1815]">
+      <section className="pt-12 pb-16 sm:pt-20 sm:pb-24 border-b border-[#DCE3D6] dark:border-[#22291C] bg-canvas">
         <div className="max-w-[1240px] mx-auto px-5 sm:px-8">
           <div className="max-w-4xl">
             <div className="flex items-center gap-3 mb-3">
-              <div className="w-10 h-10 rounded-lg bg-[#E3EFEA] dark:bg-[#14352C] flex items-center justify-center text-[#0F5C4D] dark:text-[#3FB89C]">
+              <div className="w-10 h-10 rounded-lg bg-[#E8EDE4] dark:bg-[#151A0C] flex items-center justify-center text-[#151A0C] dark:text-[#B9F000] border border-black/5 dark:border-white/5">
                 <IconComp className="w-5 h-5" />
               </div>
-              <span className="font-mono text-xs font-bold text-[#0F5C4D] dark:text-[#3FB89C] tracking-wider uppercase select-none">
+              <span className="font-mono text-xs font-bold text-[#151A0C] dark:text-[#B9F000] tracking-wider uppercase select-none">
                 {industry.name}
               </span>
             </div>
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold font-heading text-[#14232B] dark:text-white tracking-[-0.03em] leading-tight mb-5">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold font-heading text-ink tracking-[-0.03em] leading-tight mb-5">
               {industry.headline}
             </h1>
 
-            <p className="text-base sm:text-lg text-[#41545C] dark:text-[#A0B5AE] leading-relaxed mb-8">
+            <p className="text-base sm:text-lg text-secondary leading-relaxed mb-8">
               {industry.heroSummary}
             </p>
 
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center min-h-[48px] px-8 py-3.5 rounded-[10px] bg-[#0F5C4D] hover:bg-[#0A4136] text-white dark:bg-[#3FB89C] dark:hover:bg-[#329B82] dark:text-[#0C1815] text-sm font-semibold transition-all shadow-xs cursor-pointer text-center"
+                className="btn-primary group"
               >
                 <span>Request Industry Proposal</span>
                 <ArrowRight className="w-4 h-4 ml-2" />
@@ -90,7 +89,7 @@ export default function IndustryDetailPage() {
               {featuredCaseStudy && (
                 <Link
                   href={`/case-studies/${featuredCaseStudy.slug}`}
-                  className="inline-flex items-center justify-center sm:justify-start text-sm font-semibold text-[#0F5C4D] dark:text-[#3FB89C] underline underline-offset-4 decoration-1 hover:text-[#0A4136] transition-colors"
+                  className="inline-flex items-center justify-center sm:justify-start text-sm font-semibold text-[#151A0C] dark:text-[#B9F000] underline underline-offset-4 decoration-1 hover:text-[#4B6300] transition-colors"
                 >
                   <span>Review {featuredCaseStudy.clientName} Case Study</span>
                 </Link>
@@ -100,66 +99,43 @@ export default function IndustryDetailPage() {
         </div>
       </section>
 
-      {/* Main Content Body */}
-      <section className="py-14 sm:py-20 lg:py-24 border-b border-[#DCE4E1] dark:border-[#1C332D] bg-white dark:bg-[#071914]">
+      {/* Main Content */}
+      <section className="py-14 sm:py-20 lg:py-24 border-b border-[#DCE3D6] dark:border-[#22291C] bg-surface">
         <div className="max-w-[1240px] mx-auto px-5 sm:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
-            <div className="lg:col-span-8 space-y-14">
-              {/* Sector Challenges */}
+            {/* Left Content */}
+            <div className="lg:col-span-8 space-y-12">
+              {/* Industry Solutions */}
               <div className="space-y-4">
-                <span className="font-mono text-xs font-bold text-[#0F5C4D] dark:text-[#3FB89C] tracking-wider uppercase block select-none">
-                  01 / Common Industry Bottlenecks
+                <span className="font-mono text-xs font-bold text-[#151A0C] dark:text-[#B9F000] tracking-wider uppercase block select-none">
+                  02 / Engineered Solutions
                 </span>
-                <h2 className="text-2xl sm:text-3xl font-bold font-heading text-[#14232B] dark:text-white">
-                  Why Standard SaaS Fails in {industry.shortName}
+                <h2 className="text-2xl sm:text-3xl font-bold font-heading text-ink">
+                  Targeted Systems for {industry.name}
                 </h2>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
-                  {industry.challenges.map((ch, idx) => (
-                    <div
-                      key={idx}
-                      className="bg-[#FAFBFB] dark:bg-[#11201C] border border-[#DCE4E1] dark:border-[#1C332D] rounded-xl p-5 space-y-2"
-                    >
-                      <h3 className="text-sm font-bold font-heading text-[#14232B] dark:text-white leading-snug">
-                        {ch.title}
-                      </h3>
-                      <p className="text-xs text-[#41545C] dark:text-[#A0B5AE] leading-relaxed">
-                        {ch.description}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </div>
 
-              {/* Bespoke Solutions */}
-              <div className="space-y-4">
-                <span className="font-mono text-xs font-bold text-[#0F5C4D] dark:text-[#3FB89C] tracking-wider uppercase block select-none">
-                  02 / Custom Software Solutions
-                </span>
-                <h2 className="text-2xl sm:text-3xl font-bold font-heading text-[#14232B] dark:text-white">
-                  Engineered Capabilities for {industry.name}
-                </h2>
-                <div className="space-y-4 pt-2">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
                   {industry.solutions.map((sol, idx) => (
                     <div
                       key={idx}
-                      className="p-6 rounded-2xl bg-[#FAFBFB] dark:bg-[#11201C] border border-[#DCE4E1] dark:border-[#1C332D] space-y-3"
+                      className="bg-white dark:bg-[#151711] border border-[#DCE3D6] dark:border-[#22291C] rounded-xl p-5 space-y-2 hover:border-[#AEDD00] dark:hover:border-[#B9F000] transition-colors"
                     >
                       <div className="flex items-center justify-between">
-                        <h3 className="text-base sm:text-lg font-bold font-heading text-[#14232B] dark:text-white">
+                        <h3 className="text-base font-bold font-heading text-ink">
                           {sol.title}
                         </h3>
-                        <span className="font-mono text-xs font-bold text-[#0F5C4D] dark:text-[#3FB89C] select-none">
+                        <span className="font-mono text-xs font-bold text-[#151A0C] dark:text-[#B9F000] select-none">
                           {`0${idx + 1}`}
                         </span>
                       </div>
-                      <p className="text-xs sm:text-sm text-[#41545C] dark:text-[#A0B5AE] leading-relaxed">
+                      <p className="text-xs sm:text-sm text-secondary leading-relaxed">
                         {sol.description}
                       </p>
                       <div className="flex flex-wrap gap-1.5 pt-1">
                         {sol.technologies.map((tech, tIdx) => (
                           <span
                             key={tIdx}
-                            className="inline-flex items-center text-xs font-medium px-2 py-0.5 rounded-md bg-white dark:bg-[#142923] border border-[#DCE4E1] dark:border-[#1C332D] text-[#33444B] dark:text-[#B9C8C4]"
+                            className="inline-flex items-center text-xs font-medium px-2 py-0.5 rounded-md bg-[#F1F5ED] dark:bg-[#151A0C] border border-[#DCE3D6] dark:border-[#22291C] text-secondary"
                           >
                             {tech}
                           </span>
@@ -172,22 +148,22 @@ export default function IndustryDetailPage() {
 
               {/* Regulatory Compliance Frameworks */}
               <div className="space-y-4">
-                <span className="font-mono text-xs font-bold text-[#0F5C4D] dark:text-[#3FB89C] tracking-wider uppercase block select-none">
+                <span className="font-mono text-xs font-bold text-[#151A0C] dark:text-[#B9F000] tracking-wider uppercase block select-none">
                   03 / Security & Compliance
                 </span>
-                <h2 className="text-2xl sm:text-3xl font-bold font-heading text-[#14232B] dark:text-white">
+                <h2 className="text-2xl sm:text-3xl font-bold font-heading text-ink">
                   Regulatory Compliance & Data Protection
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
                   {industry.compliance.map((item, idx) => (
                     <div
                       key={idx}
-                      className="bg-[#FAFBFB] dark:bg-[#11201C] border border-[#DCE4E1] dark:border-[#1C332D] rounded-xl p-5 space-y-1.5"
+                      className="bg-white dark:bg-[#151711] border border-[#DCE3D6] dark:border-[#22291C] rounded-xl p-5 space-y-1.5"
                     >
-                      <span className="font-bold text-xs sm:text-sm text-[#0F5C4D] dark:text-[#3FB89C] block">
+                      <span className="font-bold text-xs sm:text-sm text-[#151A0C] dark:text-[#B9F000] block">
                         {item.framework}
                       </span>
-                      <p className="text-xs text-[#6B7F79] dark:text-[#8FA59F] leading-snug">
+                      <p className="text-xs text-secondary leading-snug">
                         {item.detail}
                       </p>
                     </div>
@@ -195,23 +171,23 @@ export default function IndustryDetailPage() {
                 </div>
               </div>
 
-              {/* Case Study Spotlight if available */}
+              {/* Case Study Spotlight */}
               {featuredCaseStudy && (
-                <div className="p-6 sm:p-8 rounded-2xl bg-[#E3EFEA] dark:bg-[#15382E] border border-[#0F5C4D]/30 dark:border-[#3FB89C]/30 space-y-4">
+                <div className="p-6 sm:p-8 rounded-2xl bg-[#E8EDE4] dark:bg-[#151A0C] border border-[#DCE3D6] dark:border-[#22291C] space-y-4">
                   <div className="flex items-center justify-between text-xs">
-                    <span className="font-mono font-bold text-[#0F5C4D] dark:text-[#3FB89C] uppercase tracking-wider select-none">
+                    <span className="font-mono font-bold text-[#151A0C] dark:text-[#B9F000] uppercase tracking-wider select-none">
                       Featured Industry Deployment
                     </span>
-                    <span className="font-mono text-xs text-[#41545C] dark:text-[#A0B5AE]">
+                    <span className="font-mono text-xs text-secondary">
                       {featuredCaseStudy.location}
                     </span>
                   </div>
 
-                  <h3 className="text-xl sm:text-2xl font-bold font-heading text-[#14232B] dark:text-white leading-snug">
+                  <h3 className="text-xl sm:text-2xl font-bold font-heading text-ink leading-snug">
                     {featuredCaseStudy.title}
                   </h3>
 
-                  <p className="text-xs sm:text-sm text-[#0C241E] dark:text-[#E6F4F0] leading-relaxed">
+                  <p className="text-xs sm:text-sm text-secondary leading-relaxed">
                     {featuredCaseStudy.summary}
                   </p>
 
@@ -219,12 +195,12 @@ export default function IndustryDetailPage() {
                     {featuredCaseStudy.keyResults.map((r, rIdx) => (
                       <div
                         key={rIdx}
-                        className="p-3 rounded-lg bg-white/70 dark:bg-[#11201C]/70 border border-[#0F5C4D]/20 dark:border-[#3FB89C]/20"
+                        className="p-3 rounded-lg bg-white/70 dark:bg-[#151711]/70 border border-black/5 dark:border-white/5"
                       >
-                        <span className="text-lg font-bold font-heading text-[#0F5C4D] dark:text-[#3FB89C] block">
+                        <span className="text-lg font-bold font-heading text-[#151A0C] dark:text-[#B9F000] block">
                           {r.metric}
                         </span>
-                        <span className="text-xs text-[#14232B] dark:text-white font-medium block">
+                        <span className="text-xs text-ink font-medium block">
                           {r.label}
                         </span>
                       </div>
@@ -234,39 +210,39 @@ export default function IndustryDetailPage() {
                   <div className="pt-2">
                     <Link
                       href={`/case-studies/${featuredCaseStudy.slug}`}
-                      className="inline-flex items-center text-xs sm:text-sm font-semibold text-[#0F5C4D] dark:text-[#3FB89C] underline underline-offset-4 decoration-1 hover:text-[#0A4136]"
+                      className="inline-flex items-center text-xs sm:text-sm font-semibold text-[#151A0C] dark:text-[#B9F000] underline underline-offset-4 decoration-1 hover:text-[#4B6300] group"
                     >
                       <span>Read the complete technical case study</span>
-                      <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
+                      <ArrowRight className="w-3.5 h-3.5 ml-1.5 transition-transform group-hover:translate-x-1" />
                     </Link>
                   </div>
                 </div>
               )}
             </div>
 
-            {/* Right Column: Deliverables & Consultation Card */}
+            {/* Right Column: Deliverables Card */}
             <div className="lg:col-span-4 space-y-6 lg:sticky lg:top-28">
-              <div className="bg-[#FAFBFB] dark:bg-[#11201C] border border-[#0F5C4D]/30 dark:border-[#1C332D] rounded-2xl p-6 sm:p-7 space-y-5 shadow-xs">
+              <div className="bg-white dark:bg-[#151711] border border-[#DCE3D6] dark:border-[#22291C] rounded-2xl p-6 sm:p-7 space-y-5 shadow-xs">
                 <div className="flex items-center gap-2">
-                  <ShieldCheck className="w-5 h-5 text-[#0F5C4D] dark:text-[#3FB89C]" />
-                  <h3 className="text-base font-bold font-heading text-[#14232B] dark:text-white">
+                  <ShieldCheck className="w-5 h-5 text-[#151A0C] dark:text-[#B9F000]" />
+                  <h3 className="text-base font-bold font-heading text-ink">
                     Deliverables Included
                   </h3>
                 </div>
 
-                <ul className="space-y-3 text-xs sm:text-sm text-[#41545C] dark:text-[#A0B5AE]">
+                <ul className="space-y-3 text-xs sm:text-sm text-secondary">
                   {industry.deliverables.map((item, idx) => (
                     <li key={idx} className="flex items-start gap-2.5 leading-relaxed">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[#0F5C4D] dark:bg-[#3FB89C] mt-2 shrink-0" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#151A0C] dark:bg-[#B9F000] mt-2 shrink-0" />
                       <span>{item}</span>
                     </li>
                   ))}
                 </ul>
 
-                <div className="pt-4 border-t border-[#DCE4E1] dark:border-[#1C332D] space-y-3">
+                <div className="pt-4 border-t border-[#DCE3D6] dark:border-[#22291C] space-y-3">
                   <Link
                     href="/contact"
-                    className="w-full inline-flex items-center justify-center min-h-[46px] px-6 py-3 rounded-[10px] bg-[#0F5C4D] hover:bg-[#0A4136] text-white dark:bg-[#3FB89C] dark:hover:bg-[#329B82] dark:text-[#0C1815] text-sm font-semibold transition-all shadow-xs"
+                    className="btn-primary w-full justify-center group"
                   >
                     <span>Request an Estimate</span>
                     <ArrowRight className="w-4 h-4 ml-2" />
@@ -274,7 +250,7 @@ export default function IndustryDetailPage() {
 
                   <Link
                     href="/industries"
-                    className="w-full inline-flex items-center justify-center text-xs font-semibold text-[#0F5C4D] dark:text-[#3FB89C] hover:underline"
+                    className="w-full inline-flex items-center justify-center text-xs font-semibold text-[#151A0C] dark:text-[#B9F000] hover:underline pt-2"
                   >
                     <ArrowLeft className="w-3.5 h-3.5 mr-1.5" />
                     <span>Back to all industries</span>
@@ -288,5 +264,3 @@ export default function IndustryDetailPage() {
     </>
   );
 }
-
-

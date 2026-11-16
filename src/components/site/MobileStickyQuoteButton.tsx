@@ -50,14 +50,14 @@ export function MobileStickyQuoteButton() {
     >
       <Link
         href="/contact"
-        className="w-full h-12 rounded-[10px] bg-[#0F5C4D] hover:bg-[#0A4136] dark:bg-[#3FB89C] dark:hover:bg-[#329B82] text-white dark:text-[#0C1815] font-semibold text-sm shadow-xl flex items-center justify-between px-5 border border-[#0A4136]/30 active:scale-[0.98] transition-all"
+        className="btn-primary w-full !h-12 !justify-between !px-5 shadow-2xl active:scale-[0.98] transition-all group"
       >
-        <span className="flex items-center gap-2">
-          <MessageSquare className="w-4 h-4 text-[#3FB89C] dark:text-[#0C1815]" />
+        <span className="flex items-center gap-2 font-bold text-[#101407]">
+          <MessageSquare className="w-4 h-4 text-[#101407]" />
           <span>Request an Estimate</span>
         </span>
-        <div className="w-6 h-6 rounded-[6px] bg-white/20 dark:bg-black/20 flex items-center justify-center">
-          <ArrowRight className="w-3.5 h-3.5" />
+        <div className="w-6 h-6 rounded-[6px] bg-black/10 flex items-center justify-center">
+          <ArrowRight className="w-3.5 h-3.5 text-[#101407] transition-transform group-hover:translate-x-0.5" />
         </div>
       </Link>
     </div>

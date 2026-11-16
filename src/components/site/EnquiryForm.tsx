@@ -1,4 +1,4 @@
-﻿import { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -139,7 +139,7 @@ export function EnquiryForm({ defaultService }: EnquiryFormProps) {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="bg-white dark:bg-[#12231F] border border-black/[0.08] dark:border-[#1C332D] rounded-2xl p-6 sm:p-8 md:p-9 shadow-xs space-y-5 sm:space-y-6"
+      className="bg-white dark:bg-[#151711] border border-[#DCE3D6] dark:border-[#22291C] rounded-2xl p-6 sm:p-8 md:p-9 shadow-xs space-y-5 sm:space-y-6"
       noValidate
       id="public-enquiry-form"
     >
@@ -173,7 +173,7 @@ export function EnquiryForm({ defaultService }: EnquiryFormProps) {
             htmlFor="name"
             className="block text-xs sm:text-sm font-semibold text-ink mb-1.5"
           >
-            Full Name <span className="text-maple">*</span>
+            Full Name <span className="text-[#B9F000]">*</span>
           </label>
           <input
             id="name"
@@ -181,7 +181,7 @@ export function EnquiryForm({ defaultService }: EnquiryFormProps) {
             placeholder="Evelyn Moreau"
             autoComplete="name"
             {...register("name")}
-            className={`w-full px-4 py-2.5 rounded-[8px] border bg-canvas text-ink placeholder:text-[#71818A] dark:placeholder:text-[#A0B5AE] text-base sm:text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-spruce min-h-[44px] ${
+            className={`w-full px-4 py-2.5 rounded-[8px] border bg-canvas text-ink placeholder:text-[#71818A] dark:placeholder:text-[#A0B5AE] text-base sm:text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B9F000] min-h-[44px] ${
               errors.name ? "border-red-500 ring-1 ring-red-500" : "border-line"
             }`}
             aria-invalid={errors.name ? "true" : "false"}
@@ -199,7 +199,7 @@ export function EnquiryForm({ defaultService }: EnquiryFormProps) {
             htmlFor="email"
             className="block text-xs sm:text-sm font-semibold text-ink mb-1.5"
           >
-            Corporate Email <span className="text-maple">*</span>
+            Corporate Email <span className="text-[#B9F000]">*</span>
           </label>
           <input
             id="email"
@@ -207,7 +207,7 @@ export function EnquiryForm({ defaultService }: EnquiryFormProps) {
             placeholder="evelyn.moreau@vanguardtransit.com"
             autoComplete="email"
             {...register("email")}
-            className={`w-full px-4 py-2.5 rounded-[8px] border bg-canvas text-ink text-base sm:text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-spruce min-h-[44px] ${
+            className={`w-full px-4 py-2.5 rounded-[8px] border bg-canvas text-ink text-base sm:text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B9F000] min-h-[44px] ${
               errors.email ? "border-red-500 ring-1 ring-red-500" : "border-line"
             }`}
             aria-invalid={errors.email ? "true" : "false"}
@@ -227,7 +227,7 @@ export function EnquiryForm({ defaultService }: EnquiryFormProps) {
             htmlFor="company"
             className="block text-xs sm:text-sm font-semibold text-ink mb-1.5"
           >
-            Company / Organization <span className="text-maple">*</span>
+            Company / Organization <span className="text-[#B9F000]">*</span>
           </label>
           <input
             id="company"
@@ -235,7 +235,7 @@ export function EnquiryForm({ defaultService }: EnquiryFormProps) {
             placeholder="Vanguard Transit Solutions Inc."
             autoComplete="organization"
             {...register("company")}
-            className={`w-full px-4 py-2.5 rounded-[8px] border bg-canvas text-ink text-base sm:text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-spruce min-h-[44px] ${
+            className={`w-full px-4 py-2.5 rounded-[8px] border bg-canvas text-ink text-base sm:text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B9F000] min-h-[44px] ${
               errors.company ? "border-red-500 ring-1 ring-red-500" : "border-line"
             }`}
             aria-invalid={errors.company ? "true" : "false"}
@@ -261,7 +261,7 @@ export function EnquiryForm({ defaultService }: EnquiryFormProps) {
             placeholder="+1 (416) 555-0199"
             autoComplete="tel"
             {...register("phone")}
-            className="w-full px-4 py-2.5 rounded-[8px] border border-line bg-canvas text-ink text-base sm:text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-spruce min-h-[44px]"
+            className="w-full px-4 py-2.5 rounded-[8px] border border-line bg-canvas text-ink text-base sm:text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B9F000] min-h-[44px]"
           />
         </div>
       </div>
@@ -272,12 +272,12 @@ export function EnquiryForm({ defaultService }: EnquiryFormProps) {
             htmlFor="service"
             className="block text-xs sm:text-sm font-semibold text-ink mb-1.5"
           >
-            Primary Software Solution Required <span className="text-maple">*</span>
+            Primary Software Solution Required <span className="text-[#B9F000]">*</span>
           </label>
           <select
             id="service"
             {...register("service")}
-            className={`w-full px-4 py-2.5 rounded-[8px] border bg-canvas text-ink text-base sm:text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-spruce min-h-[44px] ${
+            className={`w-full px-4 py-2.5 rounded-[8px] border bg-canvas text-ink text-base sm:text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B9F000] min-h-[44px] ${
               errors.service ? "border-red-500 ring-1 ring-red-500" : "border-line"
             }`}
             aria-invalid={errors.service ? "true" : "false"}
@@ -301,12 +301,12 @@ export function EnquiryForm({ defaultService }: EnquiryFormProps) {
             htmlFor="budget"
             className="block text-xs sm:text-sm font-semibold text-ink mb-1.5"
           >
-            Estimated Budget (USD) <span className="text-maple">*</span>
+            Estimated Budget (USD) <span className="text-[#B9F000]">*</span>
           </label>
           <select
             id="budget"
             {...register("budget")}
-            className={`w-full px-4 py-2.5 rounded-[8px] border bg-canvas text-ink text-base sm:text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-spruce min-h-[44px] ${
+            className={`w-full px-4 py-2.5 rounded-[8px] border bg-canvas text-ink text-base sm:text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B9F000] min-h-[44px] ${
               errors.budget ? "border-red-500 ring-1 ring-red-500" : "border-line"
             }`}
             aria-invalid={errors.budget ? "true" : "false"}
@@ -331,14 +331,14 @@ export function EnquiryForm({ defaultService }: EnquiryFormProps) {
           htmlFor="message"
           className="block text-xs sm:text-sm font-semibold text-ink mb-1.5"
         >
-          Project Details & Requirements <span className="text-maple">*</span>
+          Project Details & Requirements <span className="text-[#B9F000]">*</span>
         </label>
         <textarea
           id="message"
           rows={4}
           placeholder="Briefly describe your application goals, target integrations, or operational bottlenecks..."
           {...register("message")}
-          className={`w-full px-4 py-2.5 rounded-[8px] border bg-canvas text-ink text-base sm:text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-spruce ${
+          className={`w-full px-4 py-2.5 rounded-[8px] border bg-canvas text-ink text-base sm:text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B9F000] ${
             errors.message ? "border-red-500 ring-1 ring-red-500" : "border-line"
           }`}
           aria-invalid={errors.message ? "true" : "false"}
@@ -362,7 +362,7 @@ export function EnquiryForm({ defaultService }: EnquiryFormProps) {
           <input
             type="checkbox"
             {...register("consent")}
-            className="mt-1 w-4 h-4 rounded text-primary-spruce border-line focus:ring-primary-spruce shrink-0"
+            className="mt-1 w-4 h-4 rounded text-[#151A0C] dark:text-[#B9F000] border-line focus:ring-[#B9F000] shrink-0"
             aria-invalid={errors.consent ? "true" : "false"}
             aria-describedby={errors.consent ? "consent-error" : undefined}
           />
@@ -371,7 +371,7 @@ export function EnquiryForm({ defaultService }: EnquiryFormProps) {
             <Link
               href="/privacy-policy"
               target="_blank"
-              className="text-primary-spruce underline hover:text-ink font-medium"
+              className="text-[#151A0C] dark:text-[#B9F000] underline hover:text-[#4B6300] font-medium"
             >
               Privacy Policy
             </Link>{" "}
@@ -389,12 +389,12 @@ export function EnquiryForm({ defaultService }: EnquiryFormProps) {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="w-full sm:w-auto inline-flex items-center justify-center min-h-[48px] px-8 py-3.5 rounded-[10px] bg-[#0F5C4D] hover:bg-[#0A4136] text-white dark:bg-[#3FB89C] dark:hover:bg-[#329B82] dark:text-[#0C1815] text-[14px] sm:text-[15px] font-semibold transition-all shadow-sm hover:shadow-md cursor-pointer disabled:opacity-60 border border-[#0A4136]/20"
+          className="btn-primary w-full sm:w-auto cursor-pointer group"
           id="enquiry-submit-btn"
         >
           {isSubmitting ? (
             <>
-              <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+              <Loader2 className="w-4 h-4 mr-2 animate-spin text-[#101407]" />
               <span>Transmitting Inquiry...</span>
             </>
           ) : (

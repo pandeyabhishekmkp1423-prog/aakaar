@@ -1,13 +1,13 @@
-﻿import Link from "@/components/common/Link";
+import Link from "@/components/common/Link";
 import { getBreadcrumbSchema, useSEO } from "@/lib/seo";
 import { JsonLd } from "@/components/site/JsonLd";
-import { ShieldCheck, HeartHandshake, Code2, ArrowRight, Terminal, Cpu, Users } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export default function AboutPage() {
   useSEO({
-    title: "About Us | Aakaar Digital",
+    title: "About Us | Worldwide Digital Marketing & IT Solutions | Aakaar Digital",
     description:
-      "Learn about Aakaar Digital: our engineering philosophy, standards of excellence, and commitment to clear, transparent custom software solutions worldwide.",
+      "Learn about Aakaar Digital: our fusion of high-ROAS digital marketing and rigorous software engineering. Delivering custom web apps, mobile solutions, CRM architectures, and global SEO worldwide.",
     canonical: "/about",
   });
 
@@ -24,14 +24,14 @@ export default function AboutPage() {
       <section className="pt-12 pb-16 sm:pt-20 sm:pb-24 border-b border-line bg-canvas">
         <div className="max-w-[1160px] mx-auto px-4 sm:px-6">
           <div className="max-w-3xl">
-            <span className="text-xs font-bold text-primary-spruce uppercase tracking-wider block mb-2">
-              Our Engineering Heritage & Philosophy
+            <span className="text-xs font-bold text-[#151A0C] dark:text-[#B9F000] uppercase tracking-wider block mb-2">
+              Our Engineering &amp; Growth Heritage
             </span>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-ink font-heading tracking-tight mb-6">
-              Engineering Software for Modern Enterprises Worldwide.
+              Engineering Software &amp; Scaling Brands for Modern Enterprises Worldwide.
             </h1>
             <p className="text-base sm:text-lg text-secondary leading-relaxed prose-measure">
-              Aakaar Digital was established with a singular conviction: growing and mid-sized businesses globally deserve genuine engineering rigor, complete intellectual property ownership, and transparent technical partnerships.
+              Aakaar Digital was established with a singular conviction: growing and mid-sized businesses globally deserve genuine engineering rigor, measurable marketing ROI, and complete intellectual property ownership.
             </p>
           </div>
         </div>
@@ -59,57 +59,57 @@ export default function AboutPage() {
                 Our Core Operating Principles
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 pt-2">
-                <div className="w-full bg-white dark:bg-[#11201C] border border-[#DCE4E1] dark:border-[#1C332D] rounded-xl p-6 sm:p-7 flex flex-col justify-between transition-all duration-200 hover:border-[#0F5C4D] dark:hover:border-[#3FB89C] hover:shadow-[0_12px_32px_rgba(15,92,77,0.08)] group">
+                <div className="w-full bg-white dark:bg-[#151711] border border-[#DCE3D6] dark:border-[#22291C] rounded-xl p-6 sm:p-7 flex flex-col justify-between transition-all duration-200 hover:border-[#AEDD00] dark:hover:border-[#B9F000] hover:shadow-[0_12px_32px_rgba(185,240,0,0.10)] group">
                   <div>
-                    <span className="font-mono text-xs font-semibold text-[#8B9DA3] dark:text-[#5E7A72] group-hover:text-[#0F5C4D] dark:group-hover:text-[#3FB89C] transition-colors mb-3 block select-none">
+                    <span className="font-mono text-xs font-semibold text-[#8B9685] dark:text-[#A2A69B] group-hover:text-[#151A0C] dark:group-hover:text-[#B9F000] transition-colors mb-3 block select-none">
                       01
                     </span>
-                    <h3 className="text-base sm:text-lg font-heading font-bold text-[#14232B] dark:text-white group-hover:text-[#0F5C4D] dark:group-hover:text-[#3FB89C] transition-colors mb-2 leading-snug">
+                    <h3 className="text-base sm:text-lg font-heading font-bold text-[#0B0E0B] dark:text-white group-hover:text-[#151A0C] dark:group-hover:text-[#B9F000] transition-colors mb-2 leading-snug">
                       100% Code & IP Ownership
                     </h3>
-                    <p className="text-xs sm:text-sm text-[#41545C] dark:text-[#A0B5AE] leading-relaxed">
+                    <p className="text-xs sm:text-sm text-[#5C6656] dark:text-[#A2A69B] leading-relaxed">
                       You own all source code repositories, databases, and deployment scripts upon final milestone. Zero proprietary agency locks, per-seat licenses, or hidden retainers.
                     </p>
                   </div>
                 </div>
 
-                <div className="w-full bg-white dark:bg-[#11201C] border border-[#DCE4E1] dark:border-[#1C332D] rounded-xl p-6 sm:p-7 flex flex-col justify-between transition-all duration-200 hover:border-[#0F5C4D] dark:hover:border-[#3FB89C] hover:shadow-[0_12px_32px_rgba(15,92,77,0.08)] group">
+                <div className="w-full bg-white dark:bg-[#151711] border border-[#DCE3D6] dark:border-[#22291C] rounded-xl p-6 sm:p-7 flex flex-col justify-between transition-all duration-200 hover:border-[#AEDD00] dark:hover:border-[#B9F000] hover:shadow-[0_12px_32px_rgba(185,240,0,0.10)] group">
                   <div>
-                    <span className="font-mono text-xs font-semibold text-[#8B9DA3] dark:text-[#5E7A72] group-hover:text-[#0F5C4D] dark:group-hover:text-[#3FB89C] transition-colors mb-3 block select-none">
+                    <span className="font-mono text-xs font-semibold text-[#8B9685] dark:text-[#A2A69B] group-hover:text-[#151A0C] dark:group-hover:text-[#B9F000] transition-colors mb-3 block select-none">
                       02
                     </span>
-                    <h3 className="text-base sm:text-lg font-heading font-bold text-[#14232B] dark:text-white group-hover:text-[#0F5C4D] dark:group-hover:text-[#3FB89C] transition-colors mb-2 leading-snug">
+                    <h3 className="text-base sm:text-lg font-heading font-bold text-[#0B0E0B] dark:text-white group-hover:text-[#151A0C] dark:group-hover:text-[#B9F000] transition-colors mb-2 leading-snug">
                       Global Data Governance
                     </h3>
-                    <p className="text-xs sm:text-sm text-[#41545C] dark:text-[#A0B5AE] leading-relaxed">
+                    <p className="text-xs sm:text-sm text-[#5C6656] dark:text-[#A2A69B] leading-relaxed">
                       We architect systems to deploy across secure international cloud regions (AWS, Azure, GCP), respecting regional privacy laws including GDPR, PIPEDA, and CCPA.
                     </p>
                   </div>
                 </div>
 
-                <div className="w-full bg-white dark:bg-[#11201C] border border-[#DCE4E1] dark:border-[#1C332D] rounded-xl p-6 sm:p-7 flex flex-col justify-between transition-all duration-200 hover:border-[#0F5C4D] dark:hover:border-[#3FB89C] hover:shadow-[0_12px_32px_rgba(15,92,77,0.08)] group">
+                <div className="w-full bg-white dark:bg-[#151711] border border-[#DCE3D6] dark:border-[#22291C] rounded-xl p-6 sm:p-7 flex flex-col justify-between transition-all duration-200 hover:border-[#AEDD00] dark:hover:border-[#B9F000] hover:shadow-[0_12px_32px_rgba(185,240,0,0.10)] group">
                   <div>
-                    <span className="font-mono text-xs font-semibold text-[#8B9DA3] dark:text-[#5E7A72] group-hover:text-[#0F5C4D] dark:group-hover:text-[#3FB89C] transition-colors mb-3 block select-none">
+                    <span className="font-mono text-xs font-semibold text-[#8B9685] dark:text-[#A2A69B] group-hover:text-[#151A0C] dark:group-hover:text-[#B9F000] transition-colors mb-3 block select-none">
                       03
                     </span>
-                    <h3 className="text-base sm:text-lg font-heading font-bold text-[#14232B] dark:text-white group-hover:text-[#0F5C4D] dark:group-hover:text-[#3FB89C] transition-colors mb-2 leading-snug">
+                    <h3 className="text-base sm:text-lg font-heading font-bold text-[#0B0E0B] dark:text-white group-hover:text-[#151A0C] dark:group-hover:text-[#B9F000] transition-colors mb-2 leading-snug">
                       Pragmatic Tech Stacks
                     </h3>
-                    <p className="text-xs sm:text-sm text-[#41545C] dark:text-[#A0B5AE] leading-relaxed">
-                      We build with proven modern standardsâ€”Next.js, React, TypeScript, PHP/Laravel, PostgreSQLâ€”that future developers can inspect, extend, and deploy effortlessly.
+                    <p className="text-xs sm:text-sm text-[#5C6656] dark:text-[#A2A69B] leading-relaxed">
+                      We build with proven modern standards — Next.js, React, TypeScript, PHP/Laravel, PostgreSQL — that future developers can inspect, extend, and deploy effortlessly.
                     </p>
                   </div>
                 </div>
 
-                <div className="w-full bg-white dark:bg-[#11201C] border border-[#DCE4E1] dark:border-[#1C332D] rounded-xl p-6 sm:p-7 flex flex-col justify-between transition-all duration-200 hover:border-[#0F5C4D] dark:hover:border-[#3FB89C] hover:shadow-[0_12px_32px_rgba(15,92,77,0.08)] group">
+                <div className="w-full bg-white dark:bg-[#151711] border border-[#DCE3D6] dark:border-[#22291C] rounded-xl p-6 sm:p-7 flex flex-col justify-between transition-all duration-200 hover:border-[#AEDD00] dark:hover:border-[#B9F000] hover:shadow-[0_12px_32px_rgba(185,240,0,0.10)] group">
                   <div>
-                    <span className="font-mono text-xs font-semibold text-[#8B9DA3] dark:text-[#5E7A72] group-hover:text-[#0F5C4D] dark:group-hover:text-[#3FB89C] transition-colors mb-3 block select-none">
+                    <span className="font-mono text-xs font-semibold text-[#8B9685] dark:text-[#A2A69B] group-hover:text-[#151A0C] dark:group-hover:text-[#B9F000] transition-colors mb-3 block select-none">
                       04
                     </span>
-                    <h3 className="text-base sm:text-lg font-heading font-bold text-[#14232B] dark:text-white group-hover:text-[#0F5C4D] dark:group-hover:text-[#3FB89C] transition-colors mb-2 leading-snug">
+                    <h3 className="text-base sm:text-lg font-heading font-bold text-[#0B0E0B] dark:text-white group-hover:text-[#151A0C] dark:group-hover:text-[#B9F000] transition-colors mb-2 leading-snug">
                       Transparent Engineering Communication
                     </h3>
-                    <p className="text-xs sm:text-sm text-[#41545C] dark:text-[#A0B5AE] leading-relaxed">
+                    <p className="text-xs sm:text-sm text-[#5C6656] dark:text-[#A2A69B] leading-relaxed">
                       Direct communication with lead engineers. Transparent sprint demos, reproducible testing benchmarks, and clear architectural roadmaps without agency smoke and mirrors.
                     </p>
                   </div>
@@ -119,7 +119,7 @@ export default function AboutPage() {
 
             {/* Sidebar Facts */}
             <div className="lg:col-span-4">
-              <div className="rounded-xl p-6 sm:p-8 bg-white dark:bg-[#11201C] border border-[#DCE4E1] dark:border-[#1C332D] space-y-6 sticky top-28 shadow-xs">
+              <div className="rounded-xl p-6 sm:p-8 bg-white dark:bg-[#151711] border border-[#DCE3D6] dark:border-[#22291C] space-y-6 sticky top-28 shadow-xs">
                 <h3 className="text-base sm:text-lg font-bold font-heading text-ink">
                   At a Glance
                 </h3>
@@ -143,8 +143,9 @@ export default function AboutPage() {
                 </div>
 
                 <div className="pt-4 border-t border-line">
-                  <Link href="/contact" className="btn-primary w-full text-center text-sm">
-                    Start a Conversation
+                  <Link href="/contact" className="btn-primary w-full text-center text-sm group">
+                    <span>Start a Conversation</span>
+                    <ArrowRight className="w-4 h-4 ml-1.5" />
                   </Link>
                 </div>
               </div>
@@ -164,7 +165,7 @@ export default function AboutPage() {
               Discuss your software roadmap with our senior technical team. We review your specifications, evaluate architecture options, and provide clear milestone estimates.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
-              <Link href="/contact" className="btn-primary text-sm">
+              <Link href="/contact" className="btn-primary text-sm group">
                 <span>Contact our technical team</span>
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
@@ -175,4 +176,3 @@ export default function AboutPage() {
     </>
   );
 }
-

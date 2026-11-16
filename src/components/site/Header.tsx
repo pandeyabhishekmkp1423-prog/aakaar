@@ -1,4 +1,4 @@
-﻿import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import Link from "@/components/common/Link";
 import Image from "@/components/common/Image";
@@ -161,49 +161,49 @@ export function Header() {
       name: "Web Development",
       href: "/services/web-development",
       desc: "Next.js, React & full-stack web platforms",
-      icon: <Globe className="w-4 h-4 text-primary-spruce shrink-0" />,
+      icon: <Globe className="w-4 h-4 text-[#B9F000] shrink-0" />,
     },
     {
       name: "Mobile App Development",
       href: "/services/mobile-app-development",
       desc: "iOS, Android & Flutter cross-platform apps",
-      icon: <Smartphone className="w-4 h-4 text-primary-spruce shrink-0" />,
+      icon: <Smartphone className="w-4 h-4 text-[#B9F000] shrink-0" />,
     },
     {
       name: "Custom Software",
       href: "/services/custom-software",
       desc: "Bespoke business platforms & SaaS systems",
-      icon: <Code2 className="w-4 h-4 text-primary-spruce shrink-0" />,
+      icon: <Code2 className="w-4 h-4 text-[#B9F000] shrink-0" />,
     },
     {
       name: "CRM Solutions",
       href: "/services/crm-solutions",
       desc: "Pipelines, lead workflows & custom CRM builds",
-      icon: <Users className="w-4 h-4 text-primary-spruce shrink-0" />,
+      icon: <Users className="w-4 h-4 text-[#B9F000] shrink-0" />,
     },
     {
       name: "LMS & E-Learning",
       href: "/services/lms-platforms",
       desc: "Course portals, assessments & training suites",
-      icon: <GraduationCap className="w-4 h-4 text-primary-spruce shrink-0" />,
+      icon: <GraduationCap className="w-4 h-4 text-[#B9F000] shrink-0" />,
     },
     {
       name: "WhatsApp Automation",
       href: "/services/whatsapp-automation",
       desc: "Official WhatsApp Cloud API & customer chatbots",
-      icon: <MessageSquare className="w-4 h-4 text-primary-spruce shrink-0" />,
+      icon: <MessageSquare className="w-4 h-4 text-[#B9F000] shrink-0" />,
     },
     {
       name: "Integrations & Automation",
       href: "/services/integrations-automation",
       desc: "REST APIs, accounting sync & ERP workflows",
-      icon: <Cpu className="w-4 h-4 text-primary-spruce shrink-0" />,
+      icon: <Cpu className="w-4 h-4 text-[#B9F000] shrink-0" />,
     },
     {
       name: "Maintenance & Support",
       href: "/services/maintenance-support",
       desc: "Proactive SLAs, security patches & uptime",
-      icon: <ShieldCheck className="w-4 h-4 text-primary-spruce shrink-0" />,
+      icon: <ShieldCheck className="w-4 h-4 text-[#B9F000] shrink-0" />,
     },
   ];
 
@@ -221,17 +221,17 @@ export function Header() {
             id="header-brand-logo"
             aria-label="Aakaar Digital - Go to Homepage"
           >
-            <div className="relative w-10 h-10 sm:w-11 sm:h-11 shrink-0 flex items-center justify-center">
+            <div className="relative w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-[#0B0E0B] border border-[#22291C] p-1.5 shrink-0 flex items-center justify-center shadow-xs group-hover:border-[#AEDD00] transition-all">
                 <Image
                   src="/Angular White and Neon Lime Logo.png"
-                  alt="Aakaar Digital"
+                  alt="Aakaar Digital logo"
                   width={48}
                   height={48}
                   priority
                   className="w-full h-full object-contain"
                 />
               </div>
-            <span className="text-[17px] sm:text-[19px] font-bold tracking-[-0.045em] leading-none text-white group-hover:text-[#AEDD00] transition-colors whitespace-nowrap">Aakaar Digital</span>
+            <span className="text-[17px] sm:text-[19px] font-bold tracking-[-0.045em] leading-none text-ink dark:text-white group-hover:text-[#4B6300] dark:group-hover:text-[#B9F000] transition-colors whitespace-nowrap">Aakaar Digital</span>
           </Link>
 
           <nav
@@ -245,8 +245,8 @@ export function Header() {
                 onMouseEnter={() => setServicesOpen(true)}
                 className={`text-[14px] font-medium transition-colors flex items-center gap-1 cursor-pointer py-2 ${
                   pathname.startsWith("/services")
-                    ? "text-[#AEDD00] font-semibold"
-                    : "text-[#F1F3EC] hover:text-[#AEDD00]"
+                    ? "text-[#4B6300] dark:text-[#B9F000] font-semibold"
+                    : "text-ink/80 hover:text-[#4B6300] dark:text-[#F1F3EC] dark:hover:text-[#B9F000]"
                 }`}
                 aria-expanded={servicesOpen}
                 aria-haspopup="true"
@@ -265,7 +265,7 @@ export function Header() {
                   className="absolute top-full left-0 w-88 pt-2 z-50 animate-in fade-in-50 zoom-in-95 duration-100"
                   role="menu"
                 >
-                  <div className="p-2.5 bg-white dark:bg-[#12231F] border border-black/[0.08] dark:border-[#1C332D] rounded-2xl shadow-xl">
+                  <div className="p-2.5 bg-white dark:bg-[#151711] border border-black/[0.08] dark:border-[#22291C] rounded-2xl shadow-xl">
                     <div className="px-3 py-1.5 text-xs font-semibold text-secondary uppercase tracking-wider border-b border-line mb-1 flex items-center gap-1.5">
                       <span>Enterprise Software & IT</span>
                     </div>
@@ -274,10 +274,10 @@ export function Header() {
                         <Link
                           key={s.href}
                           href={s.href}
-                          className="block px-3 py-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-[#1C332D] transition-colors group"
+                          className="block px-3 py-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-[#151A0C] transition-colors group"
                           role="menuitem"
                         >
-                          <div className="flex items-center gap-2 text-xs sm:text-sm font-semibold text-ink group-hover:text-primary-spruce leading-tight">
+                          <div className="flex items-center gap-2 text-xs sm:text-sm font-semibold text-ink group-hover:text-[#151A0C] dark:group-hover:text-[#B9F000] leading-tight">
                             {s.icon}
                             <span>{s.name}</span>
                           </div>
@@ -290,7 +290,7 @@ export function Header() {
                     <div className="pt-2 border-t border-line mt-1">
                       <Link
                         href="/services"
-                        className="flex items-center justify-between px-3 py-1.5 text-xs font-semibold text-primary-spruce hover:underline"
+                        className="flex items-center justify-between px-3 py-1.5 text-xs font-semibold text-[#151A0C] dark:text-[#B9F000] hover:underline"
                       >
                         <span>View all 8 services index</span>
                         <ArrowRight className="w-3.5 h-3.5" />
@@ -305,8 +305,8 @@ export function Header() {
               href="/case-studies"
               className={`text-[14px] font-medium transition-colors ${
                 pathname.startsWith("/case-studies")
-                  ? "text-[#AEDD00] font-semibold"
-                  : "text-[#F1F3EC] hover:text-[#AEDD00]"
+                  ? "text-[#4B6300] dark:text-[#AEDD00] font-semibold"
+                  : "text-ink/80 hover:text-[#4B6300] dark:text-[#F1F3EC] dark:hover:text-[#AEDD00]"
               }`}
             >
               Case Studies
@@ -316,8 +316,8 @@ export function Header() {
               href="/industries"
               className={`text-[14px] font-medium transition-colors ${
                 pathname.startsWith("/industries")
-                  ? "text-[#AEDD00] font-semibold"
-                  : "text-[#F1F3EC] hover:text-[#AEDD00]"
+                  ? "text-[#4B6300] dark:text-[#AEDD00] font-semibold"
+                  : "text-ink/80 hover:text-[#4B6300] dark:text-[#F1F3EC] dark:hover:text-[#AEDD00]"
               }`}
             >
               Industries
@@ -327,15 +327,15 @@ export function Header() {
               type="button"
               onClick={() => {
                 if (pathname === "/") {
-                  document.getElementById("development-process")?.scrollIntoView({ behavior: "smooth" });
+                  document.getElementById("how-we-work")?.scrollIntoView({ behavior: "smooth" });
                 } else {
                   navigate("/");
                   setTimeout(() => {
-                    document.getElementById("development-process")?.scrollIntoView({ behavior: "smooth" });
+                    document.getElementById("how-we-work")?.scrollIntoView({ behavior: "smooth" });
                   }, 120);
                 }
               }}
-              className="text-[14px] font-medium text-[#F1F3EC] hover:text-[#AEDD00] transition-colors cursor-pointer"
+              className="text-[14px] font-medium text-ink/80 hover:text-[#4B6300] dark:text-[#F1F3EC] dark:hover:text-[#AEDD00] transition-colors cursor-pointer"
             >
               How We Work
             </button>
@@ -347,8 +347,8 @@ export function Header() {
                 onMouseEnter={() => setAboutOpen(true)}
                 className={`text-[14px] font-medium transition-colors flex items-center gap-1 cursor-pointer py-2 ${
                   pathname === "/about"
-                    ? "text-[#AEDD00] font-semibold"
-                    : "text-[#F1F3EC] hover:text-[#AEDD00]"
+                    ? "text-[#4B6300] dark:text-[#B9F000] font-semibold"
+                    : "text-ink/80 hover:text-[#4B6300] dark:text-[#F1F3EC] dark:hover:text-[#B9F000]"
                 }`}
                 aria-expanded={aboutOpen}
               >
@@ -365,10 +365,10 @@ export function Header() {
                   className="absolute top-full left-0 w-56 pt-2 z-50 animate-in fade-in-50 zoom-in-95 duration-100"
                   role="menu"
                 >
-                  <div className="p-2 bg-white dark:bg-[#12231F] border border-black/[0.08] dark:border-[#1C332D] rounded-xl shadow-xl space-y-0.5 text-xs sm:text-sm">
+                  <div className="p-2 bg-white dark:bg-[#151711] border border-black/[0.08] dark:border-[#22291C] rounded-xl shadow-xl space-y-0.5 text-xs sm:text-sm">
                     <Link
                       href="/about"
-                      className="block px-3 py-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-[#1C332D] text-ink font-medium"
+                      className="block px-3 py-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-[#151A0C] text-ink font-medium"
                     >
                       About Our Team
                     </Link>
@@ -385,7 +385,7 @@ export function Header() {
                           }, 120);
                         }
                       }}
-                      className="w-full text-left block px-3 py-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-[#1C332D] text-ink font-medium cursor-pointer"
+                      className="w-full text-left block px-3 py-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-[#151A0C] text-ink font-medium cursor-pointer"
                     >
                       Why Choose Us
                     </button>
@@ -402,7 +402,7 @@ export function Header() {
                           }, 120);
                         }
                       }}
-                      className="w-full text-left block px-3 py-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-[#1C332D] text-ink font-medium cursor-pointer"
+                      className="w-full text-left block px-3 py-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-[#151A0C] text-ink font-medium cursor-pointer"
                     >
                       Frequently Asked Questions
                     </button>
@@ -415,8 +415,8 @@ export function Header() {
               href="/blog"
               className={`text-[14px] font-medium transition-colors ${
                 pathname.startsWith("/blog")
-                  ? "text-[#AEDD00] font-semibold"
-                  : "text-[#F1F3EC] hover:text-[#AEDD00]"
+                  ? "text-[#4B6300] dark:text-[#B9F000] font-semibold"
+                  : "text-ink/80 hover:text-[#4B6300] dark:text-[#F1F3EC] dark:hover:text-[#B9F000]"
               }`}
             >
               Blog
@@ -428,7 +428,7 @@ export function Header() {
           <button
             type="button"
             onClick={() => setSearchOpen(true)}
-            className="p-1.5 text-[#F1F3EC] hover:text-[#AEDD00] transition-colors cursor-pointer"
+            className="p-1.5 text-ink/80 hover:text-[#4B6300] dark:text-[#F1F3EC] dark:hover:text-[#B9F000] transition-colors cursor-pointer"
             aria-label="Open search dialog"
           >
             <Search className="w-4 h-4" />
@@ -436,7 +436,7 @@ export function Header() {
 
           <Link
             href="/contact"
-            className="text-[13.5px] font-medium text-[#F1F3EC] hover:text-[#AEDD00] transition-colors"
+            className="text-[13.5px] font-medium text-ink/80 hover:text-[#4B6300] dark:text-[#F1F3EC] dark:hover:text-[#B9F000] transition-colors"
           >
             Talk to an expert
           </Link>
@@ -445,7 +445,7 @@ export function Header() {
 
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center min-h-[42px] px-5 py-2.5 rounded-[10px] bg-[#AEDD00] hover:bg-[#83A900] text-[#080908] text-[14px] font-bold transition-all shadow-sm hover:shadow-md border border-[#AEDD00]/30 cursor-pointer tracking-tight"
+            className="btn-primary group !min-h-[42px] !px-5 !py-2 !text-[13.5px]"
             id="header-cta-quote-btn"
           >
             <span>Get a Quote</span>
@@ -492,7 +492,7 @@ export function Header() {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search services, guides, technical articles..."
-                className="w-full pl-11 pr-24 py-3 rounded-xl border border-line bg-canvas text-ink text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-primary-spruce"
+                className="w-full pl-11 pr-24 py-3 rounded-xl border border-line bg-canvas text-ink text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-[#B9F000]"
               />
               <button
                 type="submit"
@@ -519,7 +519,7 @@ export function Header() {
 
       {mobileMenuOpen && (
         <div
-          className="fixed top-[82px] left-0 right-0 z-50 md:hidden bg-white dark:bg-[#0C1815] border-b border-line shadow-2xl max-h-[calc(100vh-5.125rem)] overflow-y-auto overscroll-contain animate-in slide-in-from-top-3 duration-200"
+          className="fixed top-[82px] left-0 right-0 z-50 md:hidden bg-white dark:bg-[#0B0E0B] border-b border-line shadow-2xl max-h-[calc(100vh-5.125rem)] overflow-y-auto overscroll-contain animate-in slide-in-from-top-3 duration-200"
           id="mobile-navigation-drawer"
         >
           <div className="px-5 py-6 max-w-md mx-auto space-y-3">
@@ -553,7 +553,7 @@ export function Header() {
                   <div className="pt-2 px-3 border-t border-line/50 mt-1">
                     <Link
                       href="/services"
-                      className="flex items-center justify-between text-xs font-bold text-primary-spruce hover:underline py-1"
+                      className="flex items-center justify-between text-xs font-bold text-[#151A0C] dark:text-[#B9F000] hover:underline py-1"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       <span>View all 8 services index</span>
@@ -625,7 +625,7 @@ export function Header() {
             <div className="pt-4">
               <Link
                 href="/contact"
-                className="w-full inline-flex items-center justify-center min-h-[46px] rounded-[10px] bg-[#0F5C4D] hover:bg-[#0A4136] text-white dark:bg-[#3FB89C] dark:hover:bg-[#329B82] dark:text-[#0C1815] text-sm font-bold shadow-md transition-all cursor-pointer border border-[#0A4136]/20"
+                className="btn-primary w-full group !min-h-[46px] !text-sm"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <span>Get a Quote</span>
@@ -638,14 +638,14 @@ export function Header() {
                 href="mailto:info@aakaardigital.com"
                 className="flex items-center justify-center gap-1.5 p-2.5 rounded-xl bg-canvas border border-line hover:text-ink transition-colors min-h-[40px]"
               >
-                <Mail className="w-3.5 h-3.5 text-primary-spruce" />
+                <Mail className="w-3.5 h-3.5 text-[#B9F000]" />
                 <span>Email Us</span>
               </a>
               <a
                 href="tel:+18005550199"
                 className="flex items-center justify-center gap-1.5 p-2.5 rounded-xl bg-canvas border border-line hover:text-ink transition-colors min-h-[40px]"
               >
-                <Phone className="w-3.5 h-3.5 text-primary-spruce" />
+                <Phone className="w-3.5 h-3.5 text-[#B9F000]" />
                 <span>Call Us</span>
               </a>
             </div>

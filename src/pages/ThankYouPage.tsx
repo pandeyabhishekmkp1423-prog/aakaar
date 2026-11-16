@@ -1,4 +1,4 @@
-﻿import Link from "@/components/common/Link";
+import Link from "@/components/common/Link";
 import { CheckCircle2, Search, PhoneCall, FileText, ArrowRight, Home } from "lucide-react";
 import ThankYouTracker from "./ThankYouTracker";
 import { useSEO } from "@/lib/seo";
@@ -16,7 +16,7 @@ export default function ThankYouPage() {
 
       <div className="max-w-2xl mx-auto text-center">
         {/* Success Icon */}
-        <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-mist text-primary-spruce mx-auto flex items-center justify-center mb-6 shadow-sm border border-[#3FB89C]/20">
+        <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-[#E8EDE4] dark:bg-[#151A0C] text-[#4B6300] dark:text-[#B9F000] mx-auto flex items-center justify-center mb-6 shadow-sm border border-[#AEDD00]/40 dark:border-[#22291C]">
           <CheckCircle2 className="w-10 h-10 sm:w-12 sm:h-12" />
         </div>
 
@@ -39,11 +39,11 @@ export default function ThankYouPage() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 relative">
             {/* Step 1 */}
             <div className="flex flex-col items-start space-y-2">
-              <div className="w-10 h-10 rounded-xl bg-mist text-primary-spruce flex items-center justify-center font-bold font-mono text-sm">
+              <div className="w-10 h-10 rounded-xl bg-[#E8EDE4] dark:bg-[#151A0C] text-[#151A0C] dark:text-[#B9F000] flex items-center justify-center font-bold font-mono text-sm">
                 01
               </div>
               <h3 className="font-bold text-sm sm:text-base text-ink font-heading flex items-center gap-1.5">
-                <Search className="w-4 h-4 text-primary-spruce shrink-0" />
+                <Search className="w-4 h-4 text-[#4B6300] dark:text-[#B9F000] shrink-0" />
                 <span>We review</span>
               </h3>
               <p className="text-xs text-secondary leading-relaxed">
@@ -53,11 +53,11 @@ export default function ThankYouPage() {
 
             {/* Step 2 */}
             <div className="flex flex-col items-start space-y-2">
-              <div className="w-10 h-10 rounded-xl bg-mist text-primary-spruce flex items-center justify-center font-bold font-mono text-sm">
+              <div className="w-10 h-10 rounded-xl bg-[#E8EDE4] dark:bg-[#151A0C] text-[#151A0C] dark:text-[#B9F000] flex items-center justify-center font-bold font-mono text-sm">
                 02
               </div>
               <h3 className="font-bold text-sm sm:text-base text-ink font-heading flex items-center gap-1.5">
-                <PhoneCall className="w-4 h-4 text-primary-spruce shrink-0" />
+                <PhoneCall className="w-4 h-4 text-[#4B6300] dark:text-[#B9F000] shrink-0" />
                 <span>We reach out</span>
               </h3>
               <p className="text-xs text-secondary leading-relaxed">
@@ -67,11 +67,11 @@ export default function ThankYouPage() {
 
             {/* Step 3 */}
             <div className="flex flex-col items-start space-y-2">
-              <div className="w-10 h-10 rounded-xl bg-mist text-primary-spruce flex items-center justify-center font-bold font-mono text-sm">
+              <div className="w-10 h-10 rounded-xl bg-[#E8EDE4] dark:bg-[#151A0C] text-[#151A0C] dark:text-[#B9F000] flex items-center justify-center font-bold font-mono text-sm">
                 03
               </div>
               <h3 className="font-bold text-sm sm:text-base text-ink font-heading flex items-center gap-1.5">
-                <FileText className="w-4 h-4 text-primary-spruce shrink-0" />
+                <FileText className="w-4 h-4 text-[#4B6300] dark:text-[#B9F000] shrink-0" />
                 <span>You get a plan</span>
               </h3>
               <p className="text-xs text-secondary leading-relaxed">
@@ -98,7 +98,7 @@ export default function ThankYouPage() {
           Need immediate assistance? Email our technical director directly at{" "}
           <a
             href="mailto:info@aakaardigital.com"
-            className="text-primary-spruce underline hover:text-ink font-semibold"
+            className="text-[#4B6300] dark:text-[#B9F000] underline hover:text-ink font-semibold"
           >
             info@aakaardigital.com
           </a>
