@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import Button from "@/components/common/Button";
 import { SERVICES_DATA } from "@/lib/services-data";
 import { getServiceSchema, getFaqSchema, getBreadcrumbSchema, useSEO } from "@/lib/seo";
 import { JsonLd } from "@/components/site/JsonLd";
@@ -43,25 +44,25 @@ export default function IndividualServicePage() {
               {service.tagline}
             </p>
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
-              <button
-                type="button"
+              <Button
+                variant="primary"
+                size="md"
                 onClick={() => {
                   document.getElementById("enquiry-section")?.scrollIntoView({ behavior: "smooth" });
                 }}
-                className="btn-primary text-sm min-h-[46px] justify-center cursor-pointer group"
+                arrow="right"
               >
-                <span>Request a service quote</span>
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </button>
-              <button
-                type="button"
+                Request a service quote
+              </Button>
+              <Button
+                variant="secondary"
+                size="md"
                 onClick={() => {
                   document.getElementById("deliverables")?.scrollIntoView({ behavior: "smooth" });
                 }}
-                className="btn-secondary text-sm min-h-[46px] justify-center cursor-pointer"
               >
                 View deliverables
-              </button>
+              </Button>
             </div>
           </div>
         </div>
@@ -141,16 +142,17 @@ export default function IndividualServicePage() {
                     </li>
                   ))}
                 </ul>
-                <button
-                  type="button"
+                <Button
+                  variant="primary"
+                  size="md"
                   onClick={() => {
                     document.getElementById("enquiry-section")?.scrollIntoView({ behavior: "smooth" });
                   }}
-                  className="btn-primary w-full text-center text-sm min-h-[46px] justify-center cursor-pointer group"
+                  arrow="right"
+                  className="w-full justify-center"
                 >
-                  <span>Request a Free Quote</span>
-                  <ArrowRight className="w-4 h-4 ml-1.5" />
-                </button>
+                  Request a Free Quote
+                </Button>
               </div>
             </div>
           </div>

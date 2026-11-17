@@ -1,4 +1,5 @@
 import Link from "@/components/common/Link";
+import Button from "@/components/common/Button";
 import { SERVICES_DATA } from "@/lib/services-data";
 import FeatureCard from "@/components/site/FeatureCard";
 import { JsonLd } from "@/components/site/JsonLd";
@@ -92,22 +93,24 @@ export default function ServicesIndexPage() {
       {/* Custom Multi-Service Consultation CTA */}
       <section className="py-14 sm:py-20 bg-canvas">
         <div className="max-w-[1160px] mx-auto px-4 sm:px-6">
-          <div className="rounded-xl p-6 sm:p-10 bg-white dark:bg-[#151711] border border-[#DCE3D6] dark:border-[#22291C] shadow-xs flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <div className="rounded-2xl p-6 sm:p-10 bg-surface border border-border shadow-xs flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
             <div className="max-w-xl">
-              <h2 className="text-xl sm:text-2xl font-bold font-heading text-ink mb-2">
+              <h2 className="text-xl sm:text-2xl font-bold font-heading text-ink dark:text-white mb-2">
                 Need a Cross-Functional Engineering Assessment?
               </h2>
-              <p className="text-xs sm:text-sm text-secondary leading-relaxed">
+              <p className="text-xs sm:text-sm text-text-muted leading-relaxed">
                 Most complex systems combine multiple domains — such as a custom web portal with WhatsApp automated dispatch and QuickBooks sync. We architect unified solution roadmaps.
               </p>
             </div>
-            <Link
+            <Button
+              variant="primary"
+              size="md"
               href="/contact"
-              className="btn-primary w-full sm:w-auto text-center text-sm shrink-0 min-h-[46px] justify-center group"
+              arrow="right"
+              className="w-full sm:w-auto shrink-0 justify-center"
             >
-              <span>Request consultation</span>
-              <ArrowRight className="w-4 h-4 ml-2" />
-            </Link>
+              Request consultation
+            </Button>
           </div>
         </div>
       </section>

@@ -44,32 +44,35 @@ export function Footer() {
             <Link href="/services">Services</Link>
             <Link href="/case-studies">Work</Link>
             <Link href="/blog">Insights</Link>
+            <Link href="/faq">FAQ</Link>
             <Link href="/contact">Contact</Link>
           </div>
 
           <div>
             <p className="ad-footer-label">Digital growth</p>
-            <span>SEO & Local SEO</span>
-            <span>Performance Marketing</span>
-            <span>Social Media Marketing</span>
-            <span>Content Strategy</span>
+            <Link href="/services">SEO &amp; Local SEO</Link>
+            <Link href="/services">Performance Marketing</Link>
+            <Link href="/services">Social Media Marketing</Link>
+            <Link href="/services">Content Strategy</Link>
           </div>
 
           <div>
             <p className="ad-footer-label">Technology</p>
-            <span>Website Development</span>
-            <span>E-commerce</span>
-            <span>Custom Software</span>
-            <span>CRM & ERP</span>
-            <span>Business Automation</span>
+            <Link href="/services/web-development">Website Development</Link>
+            <Link href="/services/web-development">E-commerce Platforms</Link>
+            <Link href="/services/custom-software">Custom Software</Link>
+            <Link href="/services/crm-solutions">CRM &amp; ERP Solutions</Link>
+            <Link href="/services/integrations-automation">Business Automation</Link>
           </div>
 
           <div>
-            <p className="ad-footer-label">Explore</p>
+            <p className="ad-footer-label">Legal &amp; Trust</p>
             <Link href="/privacy-policy">Privacy Policy</Link>
-            <Link href="/terms">Terms & Conditions</Link>
+            <Link href="/terms">Terms &amp; Conditions</Link>
+            <Link href="/cookies">Cookie Policy</Link>
+            <Link href="/disclaimer">Disclaimer</Link>
             <span className="ad-footer-note">
-              For project enquiries, use our contact form and we’ll be in touch.
+              For project enquiries, use our contact form and we’ll be in touch within 24 hours.
             </span>
           </div>
         </div>

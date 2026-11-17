@@ -88,7 +88,7 @@ function AdminLayoutInner({ children }: { children?: React.ReactNode }) {
             <span className="font-heading font-extrabold text-[15px] sm:text-[16px] leading-none tracking-[-0.02em] text-[#14232B] dark:text-white">
               Aakaar Digital <span className="text-[#4B6300] dark:text-[#B9F000]">Admin</span>
             </span>
-            <span className="text-[9px] sm:text-[10px] text-[#52636A] dark:text-[#B9C8C4] font-semibold uppercase tracking-[0.07em] leading-none mt-1">
+            <span className="text-xs sm:text-xs text-[#52636A] dark:text-[#B9C8C4] font-semibold uppercase tracking-[0.07em] leading-none mt-1">
               MANAGEMENT PORTAL
             </span>
           </div>
@@ -142,7 +142,7 @@ function AdminLayoutInner({ children }: { children?: React.ReactNode }) {
             <ExternalLink className="w-3.5 h-3.5" />
             <span>View Public Site</span>
           </span>
-          <span className="text-[10px] bg-canvas px-1.5 py-0.5 rounded border border-line">â†—</span>
+          <span className="text-xs bg-canvas px-1.5 py-0.5 rounded border border-line">â†—</span>
         </Link>
 
         <div className="pt-2 border-t border-line flex items-center justify-between">
@@ -154,7 +154,7 @@ function AdminLayoutInner({ children }: { children?: React.ReactNode }) {
               <span className="text-xs font-bold text-ink truncate max-w-[120px]">
                 {user.name}
               </span>
-              <span className="text-[10px] text-secondary flex items-center gap-1">
+              <span className="text-xs text-secondary flex items-center gap-1">
                 <Shield className="w-2.5 h-2.5 text-primary-spruce" />
                 <span className="capitalize">{user.role}</span>
               </span>

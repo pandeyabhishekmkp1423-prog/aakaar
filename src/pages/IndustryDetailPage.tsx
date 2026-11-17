@@ -1,5 +1,6 @@
 import { useParams, Navigate } from "react-router-dom";
 import Link from "@/components/common/Link";
+import Button from "@/components/common/Button";
 import { INDUSTRIES_DATA } from "@/lib/industries-data";
 import { CASE_STUDIES } from "@/lib/case-studies-data";
 import { JsonLd } from "@/components/site/JsonLd";
@@ -79,13 +80,14 @@ export default function IndustryDetailPage() {
             </p>
 
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-              <Link
+              <Button
+                variant="primary"
+                size="md"
                 href="/contact"
-                className="btn-primary group"
+                arrow="right"
               >
-                <span>Request Industry Proposal</span>
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Link>
+                Request Industry Proposal
+              </Button>
               {featuredCaseStudy && (
                 <Link
                   href={`/case-studies/${featuredCaseStudy.slug}`}
@@ -240,13 +242,15 @@ export default function IndustryDetailPage() {
                 </ul>
 
                 <div className="pt-4 border-t border-[#DCE3D6] dark:border-[#22291C] space-y-3">
-                  <Link
+                  <Button
+                    variant="primary"
+                    size="md"
                     href="/contact"
-                    className="btn-primary w-full justify-center group"
+                    arrow="right"
+                    className="w-full justify-center"
                   >
-                    <span>Request an Estimate</span>
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Link>
+                    Request an Estimate
+                  </Button>
 
                   <Link
                     href="/industries"

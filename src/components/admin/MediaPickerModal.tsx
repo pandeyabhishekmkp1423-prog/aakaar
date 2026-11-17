@@ -141,7 +141,7 @@ export function MediaPickerModal({ isOpen, onClose, onSelect }: MediaPickerModal
                   <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
                     <Check className="w-6 h-6" />
                   </div>
-                  <div className="absolute bottom-0 inset-x-0 bg-black/70 p-1 text-[10px] text-white truncate px-2">
+                  <div className="absolute bottom-0 inset-x-0 bg-black/70 p-1 text-xs text-white truncate px-2">
                     {item.original_name}
                   </div>
                 </button>

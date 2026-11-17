@@ -293,11 +293,11 @@ export const TipTapEditor = forwardRef<TipTapEditorRef, TipTapEditorProps>(
         </div>
 
         {/* Tip helper banner for editor */}
-        <div className="px-4 py-1.5 bg-mist/40 border-b border-line text-[11px] text-secondary flex items-center justify-between">
+        <div className="px-4 py-1.5 bg-mist/40 border-b border-line text-xs text-secondary flex items-center justify-between">
           <span>
             Highlight text to add links or headings (H1–H6). Click <strong>Add Image</strong> to place graphics anywhere in your article.
           </span>
-          <span className="font-mono text-[10px] text-secondary/70">
+          <span className="font-mono text-xs text-secondary/70">
             {editor.getText().trim() ? `${editor.getText().trim().split(/\s+/).length} words` : "0 words"}
           </span>
         </div>

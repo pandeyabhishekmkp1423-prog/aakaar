@@ -240,7 +240,7 @@ export default function AdminMediaPage() {
                   <div className="text-xs font-bold text-ink truncate mb-0.5" title={item.original_name}>
                     {item.original_name}
                   </div>
-                  <div className="text-[10px] text-secondary">
+                  <div className="text-xs text-secondary">
                     {(item.size / 1024).toFixed(0)} KB &bull; {item.width ? `${item.width}×${item.height}` : ""}
                   </div>
 
@@ -250,7 +250,7 @@ export default function AdminMediaPage() {
                         setEditingItem(item);
                         setAltText(item.alt_text || "");
                       }}
-                      className="text-primary-spruce hover:underline text-[11px] font-semibold flex items-center gap-1"
+                      className="text-primary-spruce hover:underline text-xs font-semibold flex items-center gap-1"
                       title="Edit Alt Text"
                     >
                       <Edit2 className="w-3 h-3" />

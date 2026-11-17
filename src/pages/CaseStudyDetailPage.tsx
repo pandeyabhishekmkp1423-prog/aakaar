@@ -1,5 +1,6 @@
 import { useParams, Navigate } from "react-router-dom";
 import Link from "@/components/common/Link";
+import Button from "@/components/common/Button";
 import { CASE_STUDIES } from "@/lib/case-studies-data";
 import { JsonLd } from "@/components/site/JsonLd";
 import { getBreadcrumbSchema, useSEO } from "@/lib/seo";
@@ -270,13 +271,15 @@ export default function CaseStudyDetailPage() {
                 </ul>
 
                 <div className="pt-4 border-t border-[#DCE3D6] dark:border-[#22291C] space-y-3">
-                  <Link
+                  <Button
+                    variant="primary"
+                    size="md"
                     href="/contact"
-                    className="btn-primary w-full justify-center group"
+                    arrow="right"
+                    className="w-full justify-center"
                   >
-                    <span>Request a Free Project Quote</span>
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Link>
+                    Request a Free Project Quote
+                  </Button>
 
                   <Link
                     href="/case-studies"

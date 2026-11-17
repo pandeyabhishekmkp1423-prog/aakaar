@@ -157,7 +157,7 @@ export default function AdminDashboardPage() {
                         {enquiry.name}
                       </span>
                       {enquiry.status === "new" && (
-                        <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-maple/10 text-maple uppercase">
+                        <span className="px-2 py-0.5 rounded-full text-xs font-bold bg-maple/10 text-maple uppercase">
                           New
                         </span>
                       )}
@@ -168,7 +168,7 @@ export default function AdminDashboardPage() {
                   </div>
 
                   <div className="text-right shrink-0">
-                    <span className="text-[11px] text-secondary block">
+                    <span className="text-xs text-secondary block">
                       {new Date(enquiry.created_at).toLocaleDateString("en-CA")}
                     </span>
                     <span className="text-xs font-semibold text-primary-spruce hover:underline">
@@ -202,12 +202,12 @@ export default function AdminDashboardPage() {
                     <span className="font-semibold text-ink">
                       {log.admin_name || "System"}
                     </span>
-                    <span className="flex items-center gap-1 text-[11px]">
+                    <span className="flex items-center gap-1 text-xs">
                       <Calendar className="w-3 h-3" />
                       {new Date(log.created_at).toLocaleDateString("en-CA")}
                     </span>
                   </div>
-                  <div className="text-secondary font-mono text-[11px]">
+                  <div className="text-secondary font-mono text-xs">
                     action: <span className="text-primary-spruce">{log.action}</span> on{" "}
                     {log.entity} #{log.entity_id}
                   </div>

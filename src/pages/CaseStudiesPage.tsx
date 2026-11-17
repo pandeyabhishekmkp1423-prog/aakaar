@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Link from "@/components/common/Link";
+import Button from "@/components/common/Button";
 import { CASE_STUDIES } from "@/lib/case-studies-data";
 import { JsonLd } from "@/components/site/JsonLd";
 import { getBreadcrumbSchema, useSEO } from "@/lib/seo";
@@ -210,13 +211,15 @@ export default function CaseStudiesPage() {
                 Schedule a confidential architectural discovery session with our senior engineers. We review your specifications, evaluate technical feasibility, and provide fixed milestone quotes.
               </p>
             </div>
-            <Link
+            <Button
+              variant="primary"
+              size="lg"
               href="/contact"
-              className="btn-primary shrink-0 group"
+              arrow="right"
+              className="shrink-0"
             >
-              <span>Request a Project Quote</span>
-              <ArrowRight className="w-4 h-4 ml-2" />
-            </Link>
+              Request a Project Quote
+            </Button>
           </div>
         </div>
       </section>

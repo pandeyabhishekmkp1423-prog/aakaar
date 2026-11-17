@@ -9,10 +9,10 @@ export function ThemeToggle() {
 
   useEffect(() => {
     setMounted(true);
-    const stored = localStorage.getItem("maple-theme");
-    const isDark =
-      stored === "dark" ||
-      (!stored && (document.documentElement.classList.contains("dark") || window.matchMedia("(prefers-color-scheme: dark)").matches));
+    const urlParams = new URLSearchParams(window.location.search);
+    const themeParam = urlParams.get("theme");
+    const stored = themeParam || localStorage.getItem("maple-theme");
+    const isDark = stored !== "light"; // Dark-first default unless light explicitly chosen
     
     setTheme(isDark ? "dark" : "light");
     if (isDark) {

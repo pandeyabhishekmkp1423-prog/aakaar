@@ -1,4 +1,5 @@
 import Link from "@/components/common/Link";
+import Button from "@/components/common/Button";
 import { ArrowRight } from "lucide-react";
 import { useSEO } from "@/lib/seo";
 
@@ -23,13 +24,12 @@ export function NotFoundPage() {
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4 mb-10">
-            <Link href="/" className="btn-primary">
-              <span>Return to Homepage</span>
-              <ArrowRight className="w-4 h-4 ml-2" />
-            </Link>
-            <Link href="/services" className="btn-secondary">
+            <Button variant="primary" size="md" href="/" arrow="right">
+              Return to Homepage
+            </Button>
+            <Button variant="secondary" size="md" href="/services">
               View Services
-            </Link>
+            </Button>
           </div>
 
           <div className="pt-8 border-t border-line text-xs text-secondary">

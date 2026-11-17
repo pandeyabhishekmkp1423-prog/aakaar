@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import Link from "@/components/common/Link";
+import Button from "@/components/common/Button";
 import { getBreadcrumbSchema, useSEO } from "@/lib/seo";
 import { JsonLd } from "@/components/site/JsonLd";
 import { fetchApi, getMediaUrl } from "@/lib/api-client";
@@ -200,9 +201,9 @@ export default function BlogIndexPage() {
               <p className="text-sm text-secondary max-w-md mx-auto mb-6">
                 We could not find any published articles matching your criteria. Try adjusting your search query or view all articles.
               </p>
-              <Link href="/blog" className="btn-secondary">
+              <Button variant="secondary" size="md" href="/blog">
                 View All Articles
-              </Link>
+              </Button>
             </div>
           )}
 
@@ -211,18 +212,23 @@ export default function BlogIndexPage() {
             <nav className="flex items-center justify-between pt-8 border-t border-line" aria-label="Pagination">
               <div>
                 {page > 1 ? (
-                  <Link
+                  <Button
+                    variant="secondary"
+                    size="sm"
                     href={`/blog?page=${page - 1}${category ? `&category=${category}` : ""}${q ? `&q=${q}` : ""}`}
-                    className="btn-secondary text-xs flex items-center gap-1"
+                    icon={<ArrowLeft className="w-3.5 h-3.5 mr-1" />}
                   >
-                    <ArrowLeft className="w-3.5 h-3.5" />
-                    <span>Previous Page</span>
-                  </Link>
+                    Previous Page
+                  </Button>
                 ) : (
-                  <span className="btn-secondary text-xs opacity-50 cursor-not-allowed">
-                    <ArrowLeft className="w-3.5 h-3.5" />
-                    <span>Previous Page</span>
-                  </span>
+                  <Button
+                    variant="secondary"
+                    size="sm"
+                    disabled
+                    icon={<ArrowLeft className="w-3.5 h-3.5 mr-1" />}
+                  >
+                    Previous Page
+                  </Button>
                 )}
               </div>
 
@@ -232,18 +238,23 @@ export default function BlogIndexPage() {
 
               <div>
                 {page < (meta.total_pages || 1) ? (
-                  <Link
+                  <Button
+                    variant="secondary"
+                    size="sm"
                     href={`/blog?page=${page + 1}${category ? `&category=${category}` : ""}${q ? `&q=${q}` : ""}`}
-                    className="btn-secondary text-xs flex items-center gap-1"
+                    arrow="right"
                   >
-                    <span>Next Page</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </Link>
+                    Next Page
+                  </Button>
                 ) : (
-                  <span className="btn-secondary text-xs opacity-50 cursor-not-allowed">
-                    <span>Next Page</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </span>
+                  <Button
+                    variant="secondary"
+                    size="sm"
+                    disabled
+                    arrow="right"
+                  >
+                    Next Page
+                  </Button>
                 )}
               </div>
             </nav>

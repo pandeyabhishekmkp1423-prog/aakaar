@@ -1,4 +1,4 @@
-﻿import { useState } from "react";
+import { useState } from "react";
 import { fetchApi } from "@/lib/api-client";
 import { useAdminAuth } from "@/lib/admin-auth";
 import { X, Mail, Phone, Building, Calendar, Trash2, Check, Loader2 } from "lucide-react";
@@ -86,7 +86,7 @@ export function EnquiryDrawer({ enquiry, onClose, onUpdated }: EnquiryDrawerProp
         {/* Drawer Header */}
         <div className="p-4 sm:p-6 border-b border-line flex items-center justify-between">
           <div>
-            <span className="text-[11px] font-mono font-bold text-secondary uppercase">
+            <span className="text-xs font-mono font-bold text-secondary uppercase">
               Enquiry #{enquiry.id}
             </span>
             <h3 className="text-lg sm:text-xl font-bold font-heading text-ink">{enquiry.name}</h3>

@@ -174,7 +174,7 @@ export default function AdminPostsPage() {
                         {post.categories?.map((c: any) => (
                           <span
                             key={c.id}
-                            className="text-[11px] font-medium bg-mist text-primary-spruce px-2 py-0.5 rounded"
+                            className="text-xs font-medium bg-mist text-primary-spruce px-2 py-0.5 rounded"
                           >
                             {c.name}
                           </span>

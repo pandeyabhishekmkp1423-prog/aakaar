@@ -1,0 +1,10 @@
+export { HeroSection } from "./HeroSection";
+export { TrustMetricsBar } from "./TrustMetricsBar";
+export { WhyUsSection } from "./WhyUsSection";
+export { CapabilitiesSection } from "./CapabilitiesSection";
+export { SolutionConfiguratorSection } from "./SolutionConfiguratorSection";
+export { CaseStudiesSection } from "./CaseStudiesSection";
+export { ProcessSection } from "./ProcessSection";
+export { IndustriesSection } from "./IndustriesSection";
+export { FaqSection } from "./FaqSection";
+export { CtaSection } from "./CtaSection";

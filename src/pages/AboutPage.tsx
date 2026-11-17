@@ -1,4 +1,5 @@
 import Link from "@/components/common/Link";
+import Button from "@/components/common/Button";
 import { getBreadcrumbSchema, useSEO } from "@/lib/seo";
 import { JsonLd } from "@/components/site/JsonLd";
 import { ArrowRight } from "lucide-react";
@@ -21,7 +22,7 @@ export default function AboutPage() {
       <JsonLd data={getBreadcrumbSchema(breadcrumbs)} />
 
       {/* Hero Header */}
-      <section className="pt-12 pb-16 sm:pt-20 sm:pb-24 border-b border-line bg-canvas">
+      <section className="pt-12 pb-12 sm:pt-20 sm:pb-16 border-b border-line bg-canvas">
         <div className="max-w-[1160px] mx-auto px-4 sm:px-6">
           <div className="max-w-3xl">
             <span className="text-xs font-bold text-[#151A0C] dark:text-[#B9F000] uppercase tracking-wider block mb-2">
@@ -33,6 +34,55 @@ export default function AboutPage() {
             <p className="text-base sm:text-lg text-secondary leading-relaxed prose-measure">
               Aakaar Digital was established with a singular conviction: growing and mid-sized businesses globally deserve genuine engineering rigor, measurable marketing ROI, and complete intellectual property ownership.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Team & Culture Visual Showcase */}
+      <section className="relative overflow-hidden bg-gradient-to-b from-canvas via-[#E8EDE4]/40 to-surface dark:from-[#0B0E0B] dark:via-[#14180E] dark:to-[#12150E] border-b border-line py-12 sm:py-16">
+        <div className="max-w-[1160px] mx-auto px-4 sm:px-6">
+          <div className="rounded-2xl sm:rounded-3xl border border-[#DCE3D6] dark:border-[#22291C] bg-white/85 dark:bg-[#151711]/90 backdrop-blur-md overflow-hidden shadow-sm relative">
+            <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_75%_55%_at_50%_100%,rgba(185,240,0,0.18),transparent_70%)]" />
+
+            <div className="relative z-10 px-6 pt-8 pb-0 sm:px-12 sm:pt-12 text-center">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E8EDE4] dark:bg-[#202716] text-[#3A4E00] dark:text-[#B9F000] text-xs font-bold border border-[#DCE3D6] dark:border-[#2A3A14] mb-3">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#B9F000] animate-pulse" />
+                Global Senior Engineering &amp; Growth Team
+              </span>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-ink font-heading tracking-tight max-w-2xl mx-auto mb-3">
+                The minds shaping your digital systems &amp; commercial pipeline.
+              </h2>
+              <p className="text-sm sm:text-base text-secondary max-w-xl mx-auto mb-6">
+                From full-stack web and mobile architects to performance marketing specialists, we build every digital asset with pride, craftsmanship, and measurable impact.
+              </p>
+
+              {/* Highlights pills */}
+              <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-xs sm:text-sm font-semibold text-ink mb-6 sm:mb-8">
+                <div className="flex items-center gap-2">
+                  <span className="text-[#4B6300] dark:text-[#B9F000] font-bold">✓</span>
+                  <span>100% In-House Senior Talent</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-[#4B6300] dark:text-[#B9F000] font-bold">✓</span>
+                  <span>Direct Engineer-to-Client Access</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-[#4B6300] dark:text-[#B9F000] font-bold">✓</span>
+                  <span>Worldwide Timezone Coverage</span>
+                </div>
+              </div>
+
+              {/* Team Illustration */}
+              <div className="w-full max-w-3xl mx-auto flex justify-center items-end -mb-1">
+                <img
+                  src="/Cheerful Group Selfie Cutout.png"
+                  alt="Aakaar Digital Team - The Engineers and Growth Strategists"
+                  className="w-full h-auto object-contain drop-shadow-md select-none pointer-events-none"
+                  loading="eager"
+                  fetchPriority="high"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -143,10 +193,9 @@ export default function AboutPage() {
                 </div>
 
                 <div className="pt-4 border-t border-line">
-                  <Link href="/contact" className="btn-primary w-full text-center text-sm group">
-                    <span>Start a Conversation</span>
-                    <ArrowRight className="w-4 h-4 ml-1.5" />
-                  </Link>
+                  <Button variant="primary" size="md" href="/contact" arrow="right" className="w-full justify-center">
+                    Start a Conversation
+                  </Button>
                 </div>
               </div>
             </div>
@@ -157,7 +206,7 @@ export default function AboutPage() {
       {/* CTA Section */}
       <section className="py-16 sm:py-20 bg-canvas">
         <div className="max-w-[1160px] mx-auto px-4 sm:px-6">
-          <div className="panel-card p-8 sm:p-12 bg-surface text-center max-w-3xl mx-auto shadow-xs">
+          <div className="panel-card p-8 sm:p-12 bg-surface border border-border text-center max-w-3xl mx-auto shadow-xs rounded-2xl">
             <h2 className="text-2xl sm:text-3xl font-extrabold text-ink font-heading tracking-tight mb-4">
               Build With a Dedicated Global Engineering Partner
             </h2>
@@ -165,10 +214,9 @@ export default function AboutPage() {
               Discuss your software roadmap with our senior technical team. We review your specifications, evaluate architecture options, and provide clear milestone estimates.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
-              <Link href="/contact" className="btn-primary text-sm group">
-                <span>Contact our technical team</span>
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Link>
+              <Button variant="primary" size="lg" href="/contact" arrow="right">
+                Contact our technical team
+              </Button>
             </div>
           </div>
         </div>

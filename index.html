@@ -19,26 +19,27 @@
     <link rel="icon" type="image/png" href="/Angular White and Neon Lime Logo.png" />
     <link rel="apple-touch-icon" href="/Angular White and Neon Lime Logo.png" />
 
-    <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+    <!-- Google Fonts: Manrope, Plus Jakarta Sans & Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
       rel="stylesheet"
     />
 
-    <!-- Theme initialization -->
+    <!-- Theme initialization (Dark-First default, supports ?theme=light/dark) -->
     <script>
       (function () {
         try {
-          const stored = localStorage.getItem("maple-theme");
-          const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-          if (stored === "dark" || (!stored && prefersDark)) {
-            document.documentElement.classList.add("dark");
-            document.documentElement.setAttribute("data-theme", "dark");
-          } else {
+          const urlParams = new URLSearchParams(window.location.search);
+          const themeParam = urlParams.get("theme");
+          const stored = themeParam || localStorage.getItem("maple-theme");
+          if (stored === "light") {
             document.documentElement.classList.remove("dark");
             document.documentElement.setAttribute("data-theme", "light");
+          } else {
+            document.documentElement.classList.add("dark");
+            document.documentElement.setAttribute("data-theme", "dark");
           }
         } catch (e) {}
       })();

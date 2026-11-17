@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import Link from "@/components/common/Link";
+import Button from "@/components/common/Button";
 import { fetchApi } from "@/lib/api-client";
 import { AlertCircle, Loader2 } from "lucide-react";
 
@@ -386,22 +387,18 @@ export function EnquiryForm({ defaultService }: EnquiryFormProps) {
       </div>
 
       <div className="pt-2">
-        <button
+        <Button
           type="submit"
-          disabled={isSubmitting}
-          className="btn-primary w-full sm:w-auto cursor-pointer group"
+          loading={isSubmitting}
+          variant="primary"
+          size="md"
+          arrow="right"
+          className="w-full sm:w-auto"
           id="enquiry-submit-btn"
         >
-          {isSubmitting ? (
-            <>
-              <Loader2 className="w-4 h-4 mr-2 animate-spin text-[#101407]" />
-              <span>Transmitting Inquiry...</span>
-            </>
-          ) : (
-            <span>Request a Project Quote</span>
-          )}
-        </button>
-        <p className="text-[12px] text-gray-500 dark:text-gray-400 mt-2.5">
+          Request a Project Quote
+        </Button>
+        <p className="text-xs text-gray-500 dark:text-gray-400 mt-2.5">
           Your details are protected under NDA. We respond within 24 business hours.
         </p>
       </div>

@@ -90,7 +90,7 @@ export default function AdminLoginPage() {
             </div>
           </div>
 
-          <div className="text-[11px] text-secondary flex items-center gap-1.5">
+          <div className="text-xs text-secondary flex items-center gap-1.5">
             <Shield className="w-3.5 h-3.5 text-primary-spruce shrink-0" />
             <span>Rate-limited with lockout after 5 failed attempts.</span>
           </div>

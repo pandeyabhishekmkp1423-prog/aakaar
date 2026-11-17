@@ -15,7 +15,7 @@ export default function PrivacyPolicyPage() {
     <div className="py-16 sm:py-20 max-w-[1160px] mx-auto px-4 sm:px-6">
       {/* Header */}
       <div className="max-w-3xl mb-12">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E8EDE4] dark:bg-[#151A0C] text-[#151A0C] dark:text-[#B9F000] text-xs font-semibold mb-4">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E8EDE4] dark:bg-[#151A0C] text-[#3A4E00] dark:text-[#B9F000] border border-[#DCE3D6] dark:border-[#2A3A14] text-xs font-semibold mb-4">
           <Shield className="w-3.5 h-3.5" />
           <span>Global Privacy Framework (GDPR, PIPEDA, CCPA)</span>
         </div>
@@ -30,7 +30,7 @@ export default function PrivacyPolicyPage() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
         {/* Navigation / Quick Links sidebar */}
         <aside className="lg:col-span-4 order-2 lg:order-1">
-          <div className="panel-card p-6 bg-surface sticky top-28 space-y-4 shadow-xs">
+          <div className="panel-card p-6 bg-surface sticky top-28 space-y-4 shadow-xs rounded-2xl border border-border">
             <h3 className="font-heading font-bold text-sm text-ink uppercase tracking-wider">
               Policy Sections
             </h3>
@@ -43,7 +43,7 @@ export default function PrivacyPolicyPage() {
                 { id: "cookies-analytics", label: "5. Cookies & Analytics" },
                 { id: "email-communications", label: "6. Email Communications & CASL" },
                 { id: "retention-security", label: "7. Retention & Data Security" },
-                { id: "your-rights", label: "8. Your Rights (PIPEDA & OPC)" },
+                { id: "your-rights", label: "8. Your Rights (PIPEDA, GDPR & CCPA)" },
                 { id: "children", label: "9. Children's Privacy" },
                 { id: "third-party-links", label: "10. Third-Party Links" },
                 { id: "policy-changes", label: "11. Policy Changes" },
@@ -84,7 +84,7 @@ export default function PrivacyPolicyPage() {
               1. Information Collected
             </h2>
             <p>
-              Aakaar Digital collects personal and business information strictly necessary to provide software engineering and IT consulting services. This includes:
+              Aakaar Digital collects personal and corporate information strictly necessary to provide software engineering, digital marketing, and IT consulting services. This includes:
             </p>
             <ul className="list-disc pl-5 space-y-1.5 text-xs sm:text-sm">
               <li><strong>Contact Identifiers:</strong> Full name, corporate email address, telephone number, and operating company name submitted through our website enquiry forms.</li>
@@ -103,7 +103,7 @@ export default function PrivacyPolicyPage() {
             <ul className="list-disc pl-5 space-y-1.5 text-xs sm:text-sm">
               <li>To evaluate and respond to inbound project enquiries and technical consultation requests.</li>
               <li>To draft non-binding estimates, statements of work (SOWs), and commercial proposals.</li>
-              <li>To deliver, configure, and maintain software platforms, custom integrations, CRM systems, and LMS applications.</li>
+              <li>To deliver, configure, and maintain software platforms, custom integrations, CRM systems, and digital growth funnels.</li>
               <li>To detect and mitigate automated security threats, spam submissions, and malicious API exploitation.</li>
             </ul>
           </section>
@@ -141,14 +141,20 @@ export default function PrivacyPolicyPage() {
               <li><strong>Theme Preferences:</strong> To preserve your selected light or dark mode theme across visits.</li>
               <li><strong>Aggregated Analytics:</strong> To evaluate traffic volume and page performance using anonymized metrics without tracking individuals across third-party websites.</li>
             </ul>
+            <p>
+              For complete details on cookie categories and opt-out controls, review our dedicated{" "}
+              <Link href="/cookies" className="text-[#4B6300] dark:text-[#B9F000] underline font-medium">
+                Cookie Policy
+              </Link>.
+            </p>
           </section>
 
           <section id="email-communications" className="space-y-3">
             <h2 className="text-xl sm:text-2xl font-bold font-heading text-ink pt-2">
-              6. Email Communications (CASL Compliance)
+              6. Email Communications (CASL & CAN-SPAM Compliance)
             </h2>
             <p>
-              We adhere strictly to Canadaâ€™s Anti-Spam Legislation (CASL). We do not send unsolicited commercial electronic messages (CEMs). Any transactional or informative electronic communications sent to your inbox include clear identification of Aakaar Digital and a functional mechanism to unsubscribe or adjust communication preferences.
+              We adhere strictly to Canada’s Anti-Spam Legislation (CASL) and international commercial communication standards. We do not send unsolicited commercial electronic messages (CEMs). Any transactional or informative electronic communications sent to your inbox include clear identification of Aakaar Digital and a functional mechanism to unsubscribe or adjust communication preferences.
             </p>
           </section>
 
@@ -171,7 +177,7 @@ export default function PrivacyPolicyPage() {
               8. Your Rights (PIPEDA, GDPR, CCPA & International Privacy Standards)
             </h2>
             <p>
-              Under applicable privacy frameworks (including PIPEDA, GDPR for European residents, CCPA for California residents, and provincial statutes such as Quebecâ€™s Law 25), you maintain enforceable rights regarding your personal information:
+              Under applicable privacy frameworks (including PIPEDA, GDPR for European residents, CCPA for California residents, and provincial statutes such as Quebec’s Law 25), you maintain enforceable rights regarding your personal information:
             </p>
             <ul className="list-disc pl-5 space-y-1.5 text-xs sm:text-sm">
               <li>The right to request access to the personal records we maintain concerning your identity.</li>
@@ -207,7 +213,7 @@ export default function PrivacyPolicyPage() {
               10. Third-Party Links
             </h2>
             <p>
-              Our website may contain references or hyperlinks to external websites (such as official API documentation, partner platforms, or our sister marketing site). We do not control and are not responsible for the privacy practices or content of third-party domains.
+              Our website may contain references or hyperlinks to external websites (such as official API documentation, partner platforms, or technology providers). We do not control and are not responsible for the privacy practices or content of third-party domains.
             </p>
           </section>
 
@@ -227,11 +233,11 @@ export default function PrivacyPolicyPage() {
             <p>
               For questions, access requests, or privacy concerns, contact our designated Privacy Compliance Officer:
             </p>
-            <div className="panel-card p-6 bg-surface space-y-1.5 text-xs sm:text-sm">
+            <div className="panel-card p-6 bg-surface space-y-1.5 text-xs sm:text-sm rounded-xl border border-border">
               <div className="font-bold text-ink">Aakaar Digital — Privacy Officer</div>
               <div>Email: <a href="mailto:privacy@aakaardigital.com" className="text-[#4B6300] dark:text-[#B9F000] underline">privacy@aakaardigital.com</a></div>
               <div>General Inquiries: <a href="mailto:info@aakaardigital.com" className="text-[#4B6300] dark:text-[#B9F000] underline">info@aakaardigital.com</a></div>
-              <div>Jurisdiction: Ontario & Canada Federal</div>
+              <div>Global Engineering &amp; Digital Growth Studio</div>
             </div>
           </section>
 
@@ -240,4 +246,3 @@ export default function PrivacyPolicyPage() {
     </div>
   );
 }
-

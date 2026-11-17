@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import Link from "@/components/common/Link";
+import Button from "@/components/common/Button";
 import { fetchApi, getMediaUrl } from "@/lib/api-client";
 import { getArticleSchema, getBreadcrumbSchema, useSEO } from "@/lib/seo";
 import { JsonLd } from "@/components/site/JsonLd";
@@ -260,10 +261,14 @@ export default function BlogPostPage() {
             <p className="text-secondary text-sm sm:text-base max-w-xl mx-auto mb-6 leading-relaxed">
               Our software engineering and IT specialists are ready to help you analyze, plan, and execute with full IP ownership.
             </p>
-            <Link href="/contact" className="btn-primary min-h-[46px] px-8 text-sm font-semibold group">
-              <span>Book a free consultation</span>
-              <ArrowRight className="w-4 h-4 ml-2" />
-            </Link>
+            <Button
+              variant="primary"
+              size="lg"
+              href="/contact"
+              arrow="right"
+            >
+              Book a free consultation
+            </Button>
           </div>
         </div>
       </section>

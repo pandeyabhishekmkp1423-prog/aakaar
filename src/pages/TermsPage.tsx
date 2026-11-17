@@ -16,7 +16,7 @@ export default function TermsPage() {
     <div className="py-16 sm:py-20 max-w-[1160px] mx-auto px-4 sm:px-6">
       {/* Header */}
       <div className="max-w-3xl mb-12">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E8EDE4] dark:bg-[#151A0C] text-[#151A0C] dark:text-[#B9F000] text-xs font-semibold mb-4">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E8EDE4] dark:bg-[#151A0C] text-[#3A4E00] dark:text-[#B9F000] border border-[#DCE3D6] dark:border-[#2A3A14] text-xs font-semibold mb-4">
           <Scale className="w-3.5 h-3.5" />
           <span>Commercial Agreement Framework</span>
         </div>
@@ -31,7 +31,7 @@ export default function TermsPage() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
         {/* Navigation Sidebar */}
         <aside className="lg:col-span-4 order-2 lg:order-1">
-          <div className="panel-card p-6 bg-surface sticky top-28 space-y-4 shadow-xs">
+          <div className="panel-card p-6 bg-surface sticky top-28 space-y-4 shadow-xs rounded-2xl border border-border">
             <h3 className="font-heading font-bold text-sm text-ink uppercase tracking-wider">
               Terms Sections
             </h3>
@@ -73,7 +73,7 @@ export default function TermsPage() {
               1. About the Site
             </h2>
             <p>
-              Welcome to <strong>aakaardigital.com</strong>. This website is owned and operated by aakaardigital. We provide bespoke software engineering, mobile application development, CRM solutions, LMS platforms, WhatsApp automations, and system integration services to businesses worldwide. By browsing or submitting information through this website, you agree to comply with and be bound by these Terms and Conditions.
+              Welcome to <strong>aakaardigital.com</strong>. This website is owned and operated by Aakaar Digital. We provide bespoke software engineering, mobile application development, CRM solutions, LMS platforms, WhatsApp automations, digital marketing, and system integration services to businesses worldwide. By browsing or submitting information through this website, you agree to comply with and be bound by these Terms and Conditions.
             </p>
           </section>
 
@@ -85,7 +85,7 @@ export default function TermsPage() {
               <strong>Crucial Contractual Boundary:</strong> Information, estimated timelines, or preliminary quote ranges provided through this website or preliminary email exchanges do not constitute a legally binding contract or commitment to perform services.
             </div>
             <p>
-              All software development and IT engineering engagements require a mutually executed Master Services Agreement (MSA) and a detailed Statement of Work (SOW) signed by authorized corporate officers of both parties before any billable work or project commencement occurs.
+              All software development, IT engineering, and performance marketing engagements require a mutually executed Master Services Agreement (MSA) and a detailed Statement of Work (SOW) signed by authorized corporate officers of both parties before any billable work or project commencement occurs.
             </p>
           </section>
 
@@ -94,7 +94,7 @@ export default function TermsPage() {
               3. Intellectual Property
             </h2>
             <p>
-              All original text, user interfaces, branding, software architecture diagrams, illustrative dashboard mockups, and codebase assets published on this website are the proprietary intellectual property of Aakaar Digital and are protected under the Canadian Copyright Act and international copyright treaties.
+              All original text, user interfaces, branding, software architecture diagrams, illustrative dashboard mockups, and codebase assets published on this website are the proprietary intellectual property of Aakaar Digital and are protected under international copyright treaties.
             </p>
             <p>
               Under our client agreements, custom software engineered for clients transfers 100% intellectual property ownership to the client upon final milestone invoice payment.
@@ -118,7 +118,7 @@ export default function TermsPage() {
               5. Third-Party Services (WhatsApp, Cloud & Payments)
             </h2>
             <p>
-              Our solutions interface with third-party enterprise platforms, including Metaâ€™s WhatsApp Business Platform, cloud infrastructure hosts (AWS, Microsoft Azure, Google Cloud), and payment gateways (Stripe, Moneris). Your utilization of these underlying services remains subject to their respective terms of service and acceptable use policies. Aakaar Digital is not liable for upstream service interruptions caused by third-party infrastructure providers.
+              Our solutions interface with third-party enterprise platforms, including Meta’s WhatsApp Business Platform, cloud infrastructure hosts (AWS, Microsoft Azure, Google Cloud), and payment gateways (Stripe, Moneris). Your utilization of these underlying services remains subject to their respective terms of service and acceptable use policies. Aakaar Digital is not liable for upstream service interruptions caused by third-party infrastructure providers.
             </p>
           </section>
 
@@ -136,7 +136,7 @@ export default function TermsPage() {
               7. Limitation of Liability
             </h2>
             <p>
-              To the fullest extent permitted by applicable Canadian law, Aakaar Digital, its officers, employees, and contractors shall not be liable for any indirect, incidental, punitive, or consequential damages resulting from your use of or inability to access this website. In no event shall our total liability arising from website usage exceed one hundred Canadian dollars ($100 CAD).
+              To the fullest extent permitted by applicable law, Aakaar Digital, its officers, employees, and contractors shall not be liable for any indirect, incidental, punitive, or consequential damages resulting from your use of or inability to access this website. In no event shall our total liability arising from website usage exceed one hundred dollars ($100 USD/CAD).
             </p>
           </section>
 
@@ -158,7 +158,7 @@ export default function TermsPage() {
               9. External Links
             </h2>
             <p>
-              Links to external websites, including our sister digital marketing web properties, are provided solely for user convenience. We do not endorse or assume liability for third-party websites or services.
+              Links to external websites, including partner platforms and documentation resources, are provided solely for user convenience. We do not endorse or assume liability for third-party websites or services.
             </p>
           </section>
 
@@ -167,7 +167,7 @@ export default function TermsPage() {
               10. Governing Law and Jurisdiction
             </h2>
             <p>
-              These Terms and any non-contractual disputes arising out of or related to this website shall be governed by and construed in accordance with the laws of the Province of <strong>{province}</strong> and the federal laws of Canada applicable therein, without regard to conflict of law principles. The courts situated in {province}, Canada shall possess exclusive jurisdiction over any proceedings.
+              These Terms and any non-contractual disputes arising out of or related to this website shall be governed by and construed in accordance with applicable laws without regard to conflict of law principles. The competent courts shall possess exclusive jurisdiction over any proceedings.
             </p>
           </section>
 
@@ -185,10 +185,10 @@ export default function TermsPage() {
               12. Commercial Contact
             </h2>
             <p>For questions regarding these Terms or formal legal inquiries:</p>
-            <div className="panel-card p-6 bg-surface space-y-1.5 text-xs sm:text-sm">
-              <div className="font-bold text-ink">Aakaar Digital â€” Corporate Legal</div>
+            <div className="panel-card p-6 bg-surface space-y-1.5 text-xs sm:text-sm rounded-xl border border-border">
+              <div className="font-bold text-ink">Aakaar Digital — Corporate Legal</div>
               <div>Email: <a href="mailto:info@aakaardigital.com" className="text-[#4B6300] dark:text-[#B9F000] underline">info@aakaardigital.com</a></div>
-              <div>Engineering bespoke software & IT solutions for businesses worldwide.</div>
+              <div>Engineering bespoke software &amp; digital growth solutions for businesses worldwide.</div>
             </div>
           </section>
 
@@ -197,4 +197,3 @@ export default function TermsPage() {
     </div>
   );
 }
-

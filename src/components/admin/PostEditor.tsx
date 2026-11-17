@@ -1,4 +1,4 @@
-﻿import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import { fetchApi, getMediaUrl } from "@/lib/api-client";
 import { useAdminAuth } from "@/lib/admin-auth";
@@ -371,11 +371,11 @@ export function PostEditor({ postId }: PostEditorProps) {
 
             {/* Google SERP Preview */}
             <div className="p-4 rounded-xl bg-canvas border border-line space-y-1">
-              <div className="text-[11px] text-secondary flex items-center gap-1">
+              <div className="text-xs text-secondary flex items-center gap-1">
                 <span>aakaardigital.com</span>
-                <span>â€º</span>
+                <span>›</span>
                 <span>blog</span>
-                <span>â€º</span>
+                <span>›</span>
                 <span className="truncate">{slug || "slug"}</span>
               </div>
               <div className="text-base font-medium text-[#1a0dab] dark:text-[#8ab4f8] hover:underline cursor-pointer truncate">

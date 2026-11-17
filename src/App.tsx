@@ -15,7 +15,12 @@ import ContactPage from "./pages/ContactPage";
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage";
 import TermsPage from "./pages/TermsPage";
 import ThankYouPage from "./pages/ThankYouPage";
+import SuccessPage from "./pages/SuccessPage";
+import FaqPage from "./pages/FaqPage";
+import CookiePolicyPage from "./pages/CookiePolicyPage";
+import DisclaimerPage from "./pages/DisclaimerPage";
 import NotFoundPage from "./pages/NotFoundPage";
+import StyleguidePage from "./pages/StyleguidePage";
 
 import AdminLayout from "./pages/admin/AdminLayout";
 import AdminDashboardPage from "./pages/admin/AdminDashboardPage";
@@ -118,10 +123,23 @@ export function App() {
               <Route path="blog" element={<BlogPage />} />
               <Route path="blog/:slug" element={<BlogPostPage />} />
               <Route path="contact" element={<ContactPage />} />
+              <Route path="faq" element={<FaqPage />} />
+
+              {/* Legal, Privacy & Compliance Pages */}
               <Route path="privacy" element={<Navigate to="/privacy-policy" replace />} />
               <Route path="privacy-policy" element={<PrivacyPolicyPage />} />
               <Route path="terms" element={<TermsPage />} />
-              <Route path="thank-you" element={<ThankYouPage />} />
+              <Route path="terms-and-conditions" element={<Navigate to="/terms" replace />} />
+              <Route path="terms-of-service" element={<Navigate to="/terms" replace />} />
+              <Route path="cookies" element={<CookiePolicyPage />} />
+              <Route path="cookie-policy" element={<Navigate to="/cookies" replace />} />
+              <Route path="disclaimer" element={<DisclaimerPage />} />
+
+              {/* Success & Confirmation Pages */}
+              <Route path="success" element={<SuccessPage />} />
+              <Route path="thank-you" element={<SuccessPage />} />
+
+              <Route path="styleguide" element={<StyleguidePage />} />
               <Route path="*" element={<NotFoundPage />} />
             </Route>
 

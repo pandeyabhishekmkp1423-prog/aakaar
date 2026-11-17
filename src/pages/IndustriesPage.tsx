@@ -1,4 +1,5 @@
 import Link from "@/components/common/Link";
+import Button from "@/components/common/Button";
 import { INDUSTRIES_DATA } from "@/lib/industries-data";
 import { JsonLd } from "@/components/site/JsonLd";
 import { getBreadcrumbSchema, useSEO } from "@/lib/seo";
@@ -137,13 +138,15 @@ export default function IndustriesPage() {
                 We frequently build systems combining multi-sector workflows — such as cold-chain medical logistics or industrial wholesale billing portals. Schedule a consultation to review technical feasibility.
               </p>
             </div>
-            <Link
+            <Button
+              variant="primary"
+              size="lg"
               href="/contact"
-              className="btn-primary shrink-0 group"
+              arrow="right"
+              className="shrink-0"
             >
-              <span>Speak with a Lead Engineer</span>
-              <ArrowRight className="w-4 h-4 ml-2" />
-            </Link>
+              Speak with a Lead Engineer
+            </Button>
           </div>
         </div>
       </section>

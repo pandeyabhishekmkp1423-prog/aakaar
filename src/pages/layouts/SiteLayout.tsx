@@ -24,7 +24,7 @@ export function SiteLayout() {
       <JsonLd data={getOrganizationSchema()} />
       <JsonLd data={getWebSiteSchema()} />
       <Header />
-      <main id="main-content" className="flex-1 pt-[76px] focus:outline-none">
+      <main id="main-content" className="flex-1 pt-[80px] focus:outline-none">
         <Outlet />
       </main>
       <Footer />

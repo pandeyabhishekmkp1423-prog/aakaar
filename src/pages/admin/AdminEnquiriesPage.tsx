@@ -169,7 +169,7 @@ export default function AdminEnquiriesPage() {
                       <div className="flex items-center gap-2">
                         <span className="font-bold text-ink">{enquiry.name}</span>
                         {enquiry.status === "new" && (
-                          <span className="px-2 py-0.5 rounded-full text-[10px] font-bold bg-maple/10 text-maple uppercase">
+                          <span className="px-2 py-0.5 rounded-full text-xs font-bold bg-maple/10 text-maple uppercase">
                             New
                           </span>
                         )}
